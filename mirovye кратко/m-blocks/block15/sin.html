@@ -1,0 +1,39 @@
+<HTML>
+ <HEAD>
+   <META http-equiv="Content-Type"    content="text/html; charset=windows-1251">
+   <TITLE>Абсолютное позиционирование и Z-index</TITLE>
+   <SCRIPT language=JavaScript>
+
+  var vi=10;
+  var vA=30;
+  var vz=0.05;
+  var vN=300;
+  var ctime=7;
+  var Wtmimg =0; 
+
+  function mfunc2(){
+               var obj = document.all["ch"].style;
+               vi++;
+               obj.posLeft =vi;
+               obj.posTop = vA*Math.sin(vz*vi)+150; 
+                //alert("=vi="+vi+" obj.posLeft="+obj.posLeft+" obj.posTop="+obj.posTop);
+ }
+
+  function gsin() {
+      //alert("=qq=");
+      Wtmimg = setInterval("mfunc2()",ctime);
+  }
+   </SCRIPT>
+ </HEAD>
+
+ <BODY bgcolor=white text=black   onload="tim=setInterval('Move()',2)">
+    <H2>Абсолютное позиционирование/H2>
+   <HR>
+   <input type=button onclick=gsin() value="q1">
+
+    <DIV id=ch style="position:absolute; top:200; left:0;  width:125;   z-index:5">
+        <IMG src=cheetah.gif width="125" height="82" alt ="">
+    </DIV>
+
+  </BODY>
+</HTML>

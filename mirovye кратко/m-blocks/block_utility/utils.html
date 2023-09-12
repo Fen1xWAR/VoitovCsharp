@@ -1,0 +1,85 @@
+<HTML>
+<HEAD>
+  <TITLE> пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ </TITLE>
+  <SCRIPT LANGUAGE="JavaScript">
+
+function getvalue(id) {
+  var s; var objid= document.getElementById(id);
+  if(!objid)  return false;
+  s= objid.value;
+  if (!s) {  s= objid.firstChild.nodeValue;}
+  return s;
+}
+
+function getbyid() 
+{   
+     var s= getvalue("idbt01");
+     if(!s)  {   alert(" == not set == ");  return false; }
+}
+
+ function setvalue(id,val) {  
+      var objid= document.getElementById(id);
+      objid.value= val;
+}
+
+function dovis(v,id) {
+       var  objid= document.getElementById(id);
+       if (v==1) { objid.style.display= "block";}
+       else {objid.style.display= "none";}
+}
+
+function setChildvalue(id,val) { 
+      var objid= document.getElementById(id);
+      objid.firstChild.nodeValue= val;
+      objid.style.display= "block";  
+}
+
+//***************************************
+
+   function  dovid(){
+      //alert("qq");
+      dovis(1,"idp")
+   }
+
+   function  donovid(){
+      dovis(0,"idp")
+   }
+
+   function  modp(){
+      setChildvalue('idp3','пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ id=idp3')
+   }
+
+   function  modtext(){
+      setChildvalue('idp3','пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ id=idp3')
+   }
+
+ </SCRIPT>
+</HEAD>
+
+<BODY>
+<H1> **  пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ  **</H1>
+<input type="button" value="пїЅпїЅпїЅпїЅпїЅ <p>" onclick=  dovid();>
+<input type="button" value="пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ <p>" onclick=  donovid();>
+
+<input type="button" value="пїЅпїЅпїЅпїЅпїЅ type text " onclick=  dovis(1,'idpt');>
+<input type="button" value="пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ type text " onclick=  dovis(0,'idpt');>
+<input id=idb type="button" value="пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ input type=text  " onclick=setvalue('idpt','99');>
+
+<br>
+<input id=idb type="button" value="пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ <пїЅ> " onclick=  modp();>
+<input type="button" value="пїЅпїЅпїЅпїЅпїЅ button " onclick=  dovis(1,'idb');>
+<input type="button" value="пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ button " onclick=  dovis(0,'idb');>
+
+
+<p id=idp>n:<input  id=idpt type="text" name="n"   size='8' value="10" > </p>
+<p>
+a:<input type="text" name="a"   size='8' value="5" >
+</p>
+
+<p id=idp3>
+пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ  id=idp3
+</p>
+
+</BODY>
+</HTML>
+

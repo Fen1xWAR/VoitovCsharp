@@ -1,0 +1,222 @@
+<html>
+<head>
+<title> Форма для  Занесения информации о сотруднике</title> 
+
+</head>
+<body>
+<h1> Занесение информации о сотруднике</h1>
+
+ <SCRIPT LANGUAGE="JavaScript">
+ function  retstaffs(){
+      alert("=Возврат=");
+      var pgoto= 'index.html';     
+      window.location=pgoto;    // Переход на страницу!
+ }
+
+
+   function setvalue(id,val) { 
+      var objid= document.getElementById(id);
+      objid.value= val;
+    }
+
+  function getvalue(id) {
+    var S1; var objid= document.getElementById(id);
+    S1= objid.value;
+    if (!S1) {  S1= objid.firstChild.nodeValue;}
+    return S1;
+  }
+
+
+  function fget() {
+    var S= getvalue('vid');
+    var S2= getvalue(S);
+    alert ('S='+S+'  S2='+S2);
+  }
+
+  function fset() {
+    var id= getvalue('vid');
+    var val= getvalue('vval');
+    alert ('id='+id+'  val='+val);
+    setvalue(id,val) 
+
+    var ResortObj = document.getElementById("ida");
+    //var cnt=ResortObj.options.length;
+    ResortObj[0] = new Option("Луксор", "0");
+    ResortObj[2] = new Option("222", "2");
+    ResortObj[1] = new Option("111", "1"); 
+  }
+
+
+
+ </SCRIPT>
+
+
+
+<TABLE  border=0  align=center>
+ <TR>
+  <TD><input  type='BUTTON' align='right'  value='get'  onclick=fget()  ></TD>
+  <TD><input  type='BUTTON' align='center'  value='set' onclick=fset()     ></TD>
+  <TD>id:<input id=vid  type='text'   value='' size=10  ></TD>
+  <TD>val:<input id=vval  type='text'   value='' size=10  ></TD>
+ </TR>
+</TABLE>
+
+
+
+<!--  ***  Наша форма   ***   -->
+<form name='MyForm' method='post' action='dosotr.php'>
+
+<!--  ***  Таблица   ***  -->
+<table border="0" cellspacing="0" cellpadding="3" class="tablebody" width="100%">
+
+<!--  ==== КНОПКИ ====   -->
+<tr>
+  <td valign="top" align="left" class="tablebody">
+  <input  type='submit' align='left' name='tb_write'  value='Сохранить' onClick='write2();'>
+  <input  type='BUTTON' align='left' name='sotrdelete'  value='Удалить запись'   >
+  <input  type='BUTTON' align='right' name='returnstaffs'  value='Возврат'  onClick='retstaffs();' >
+  </td>
+</tr>
+
+
+<tr>
+    <td valign="top" align="left" class="tablebody" nowrap>
+    <font class="tablebodytext2" size=6>Введите информацию</font></td>
+</tr>
+
+<tr>
+<td>ИД:<br>
+  <input name='NAME1' type='text' size='8' class='fieldmail' value='' >
+</td>
+</tr>
+
+<tr><td>Фамилия:<br>
+  <input id=idf name='fio' type='text' size='30' class='fieldmail' value=''>
+</td></tr>
+
+<tr><td>Имя:<br>
+  <input id=idn name='imia' type='text' size='30' class='fieldmail' value=''>
+</td></tr>
+
+<tr><td>Отчество:<br>
+   <input id=ido name='otchestvo' type='text' size='30' class='fieldmail' value=''>
+</td></tr>
+
+
+<tr><td>Дата рождения:<br>
+   <input id=idd name='d' type='text' size='20' class='fieldmail' value=''>
+</td></tr>
+
+
+<tr><th align="left">
+<br>Контактная информация:<br>        
+</th></tr>
+<tr><td>Рабочий телефон:<br>
+     <input name='rabtel' type='text' size='20' class='fieldmail' value=''>
+</td></tr>
+
+<tr><td>Домашний телефон:<br>
+   <input name='domtel' type='text' size='20' class='fieldmail' value=''>
+</td></tr>
+<tr><td>
+E-mail:<br>
+   <input name='kontaktninf' type='text' size='50' class='fieldmail' value=''>
+</td></tr>
+
+
+<tr><td>
+<br>Образование:<br>
+   <input name='obrazovan' type='text' size='50' class='fieldmail' value=''>
+</td></tr>
+
+
+<tr><td>      
+Должность:<br>
+    <select id=ida name="m_dolvn" size=5 length=300 multiple>
+    </select>
+</td></tr>
+
+<tr><td>      
+Подразделение:<br>
+    <select name="m_podrazd" size=5 length=300 multiple>
+    </select>
+</td></tr>
+
+<tr><td>      
+Подразделение уровень 2:<br>
+    <select name="m_podrazd2" size=3 length=300 multiple>
+    </select>
+</td></tr>
+
+
+<tr><td>      
+Ученая степень:<br>
+    <select name="m_uchstep" size=3 length=300 multiple>
+    </select>
+</td><td >      
+
+
+
+<tr><td >      
+Ученое звание:<br>
+    <select name="m_uchzvan" size=3 length=300 multiple>
+    </select>
+</td></tr>
+
+
+<tr>
+<th colspan=2  width=90%   align="left">
+Профессиональная биография:<br>
+<textarea  id=idp name="profbiogr" cols=70% rows="10" class="fieldmail" >
+</textarea><br>
+</th>
+</tr>
+
+<tr>
+<th colspan=2 align="left">
+Научные интересы:<br>
+<textarea name="nauchninteresy" cols=70% rows="10" class="fieldmail">
+</textarea><br>
+</th>
+</tr>
+
+<tr>
+<th colspan=2 align="left">
+Публикации:<br>
+<textarea name="publitions" cols=70% rows="10" class="fieldmail">
+</textarea><br>
+</th>
+</tr>
+
+
+<tr>
+<th colspan=2 align="left">
+Награды:<br>
+<textarea name="nagrady" cols=70% rows="5" class="fieldmail">
+</textarea><br>
+</th>
+</tr>
+
+
+<tr>
+<th colspan=2 align="left">
+Дополнительные сведения:<br>
+<textarea name="dopsved" cols=70% rows="5" class="fieldmail">
+</textarea><br>
+</th>
+</tr>
+
+
+<tr>
+  <td valign="top" align="left" class="tablebody">
+     <input  type='submit' align='left' name='tb_write'  value='Сохранить' onClick='write2();'>
+     <input  type='BUTTON' align='left'   name='sotrdelete'  value='Удалить запись'  onClick='delete2();' >
+     <input  type='BUTTON' align='right' name='returnstaffs2'  value='Возврат'  onClick='retstaffs();' >
+  </td>
+</tr>
+</table>
+
+</form>
+
+</body>
+</html>

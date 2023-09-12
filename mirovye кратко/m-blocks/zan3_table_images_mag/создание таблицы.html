@@ -1,0 +1,113 @@
+<html>
+<center> 
+<head>
+   <META http-equiv="Content-Type"    content="text/html; charset=windows-1251">
+ <title> ===ТЕСТ=== </title> 
+
+<style type="text/css">
+  table { margin-left: auto;  margin-right: auto; position: relative;  top: 10px; }
+</style>
+</head>
+
+<body>
+  <h3> ===ТЕСТ=== </h3>
+  <button id="button1" onclick="create_control();" >Начать</button>   
+  <button id="button3" onclick="delete2();" >delete</button>  
+  <button size=120 id="button4" onclick="getbyid();" >get idbt01</button>       
+</body>
+</center>
+
+<script type="text/javascript" >
+
+var table; 
+var rows  = 5;  // Число строк
+var cells  = 5;  // Число ячеек в строке (количество столбцов)
+
+function setElementValue(elementId, value)  //s
+{
+        var element = document.getElementById(elementId);
+        if(!element)  return false;
+        element.value = value;
+        return true;
+}
+
+function getvalue(id) {
+  var s; var objid= document.getElementById(id);
+  if(!objid)  return false;
+  s= objid.value;
+  if (!s) {  s= objid.firstChild.nodeValue;}
+  return s;
+}
+
+function prqq2(i,j)  { 
+  var id= 'idbt' + i + j;
+   if (getvalue(id)!="X")  setElementValue(id, "X");
+   else setElementValue(id, "     ");
+} // works!!!
+
+function getbyid() //создает кнопку
+  {   
+     var s= getvalue("idbt01");
+     if(!s)  {   alert(" == not set == ");  return false; }
+     alert(" == tt == s="+s);
+  }
+
+  function delete2() //создает кнопку
+  {  
+      if (typeof table !=="undefined"){
+          table.parentNode.removeChild(table);
+     }
+  }
+
+var btn;  // кнопка
+function ndobt(i,j) //создает кнопку
+{    var s; var ss;
+      btn = document.createElement("input");
+      btn.name = 'nbt' + i + j;
+      s= 'idbt' + i + j;  btn.id = s;   btn.type = 'button'; // или submit, reset;
+      //btn.value = s;
+      btn.value = "     ";
+
+      btn.setAttribute('onclick','prqq2('+i+','+j+'); '); //событие onclick 
+}  // id
+
+function create_control() //создание таблицы  
+{
+  table = document.createElement("table");
+  table.id= "idt";
+  // Получить ссылку на body
+  var body = document.getElementsByTagName("body")[0];
+
+  // Создать элемент <table> и элемент <tbody>
+  table.border=0;         //table.align="center";
+  var tableBody = document.createElement("tbody");
+
+  // Создать все ячейки
+  for (var i = 0; i < rows; i++) {
+     var row = document.createElement("tr");  // Создать строку
+
+     for (var j = 0; j < cells; j++) { //
+        // Создать и заполнить элемент <td>
+        var cell = document.createElement("td");
+        cell.height=30;  cell.style.color="blue";  cell.width=30; //VV
+
+        //  заполнить данными ячейку
+        ndobt(i,j);
+        cell.appendChild(btn); 
+        row.appendChild(cell);
+     } //
+
+     // Добавить строку в конец элемента tbody
+     tableBody.appendChild(row);
+  } // i,j
+
+  // Поместить <tbody> внуть <table>
+  table.appendChild(tableBody);
+  // Добавить <table> внутрь <body>
+  body.appendChild(table);
+} 
+
+</script>
+</html>
+
+

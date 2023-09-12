@@ -1,0 +1,128 @@
+<HTML><HEAD>
+  <TITLE> getElementById</TITLE>
+</HEAD>
+<BODY>
+ <SCRIPT LANGUAGE="JavaScript">
+   function   prDOM(){
+      alert("1 prDOM");
+      var obj= document.getElementById("p1");  
+      obj.firstChild.nodeValue= "Мы заменили текст в объекте p id=p1";
+      alert("2 prDOM");
+
+      var obj= document.getElementById("L1");  
+      obj.firstChild.nodeValue= "мы изменили текст в объекте LI  id=L1";
+
+      var obj= document.getElementById("x1");  
+      obj.value= "мы изменили текст в объекте <input  id='x1'  type='text'    ";
+
+      var obj= document.getElementById("d1");  
+      obj.firstChild.nodeValue= "мы изм в div  id=d1";
+
+      var obj= document.getElementById("b1");  
+      obj.firstChild.nodeValue= "qq";
+   }
+
+   function   zamena_firstChild(){
+      var objt1= document.getElementById("t1");  
+      var objt2= document.getElementById("t2");  
+      s1= objt1.firstChild.nodeValue;
+      s2= objt2.firstChild.nodeValue;
+      alert("s2="+s2);
+
+      objt1.firstChild.nodeValue= s2;
+   }
+
+   function   gett2firstChild(){ 
+      var objt2= document.getElementById("t2");  
+      s2= objt2.firstChild.nodeValue;
+      alert("s2="+s2);
+   }
+
+   function   gett2(){  
+      s2= f.ft.value;
+      alert("s2="+s2);
+   }
+
+   //    by inner to <p>  1111111
+   function  p1_innHTML(){
+      var objt2= document.getElementById("t2");  
+      s2= objt2.value;
+      //alert("=1 p1:  value="+s2); 
+      var objt1= document.getElementById("p1"); 
+      objt1.innerHTML = s2
+      //alert("=2 p1:  value="+s2); 
+   }
+
+   function   gett2_innHTML(){  
+      var objt2= document.getElementById("t2");  
+      alert("=t2:  value="+objt2.value+'  \n innerHTML='+objt2.innerHTML); 
+      var objt1= document.getElementById("t1");  
+      alert("=t1:  value="+objt1.value+'  \n innerHTML='+objt1.innerHTML); 
+   }
+
+   function  set_innHTML(){
+      var objt2= document.getElementById("t2");  
+      s2= objt2.value;
+      var objt1= document.getElementById("t1"); 
+      objt1.innerHTML = s2
+   }
+
+   function  addtext(id,s){
+      var objt1= document.getElementById(id);  
+      s1= objt1.value;
+      if (s1=="")  s1= s1 +  s;
+      else s1= s1 + "\n" + s;
+      objt1.innerHTML = s1;
+   }
+
+ </SCRIPT>
+
+<H1>  ЗАМЕНА </H1>
+<input id="b1" type="button" value=" Замена"  size='40' onclick=  prDOM();>
+<input id="b3" type="button" value=" замена t1 by firstChild"  size='40' onclick=  zamena_firstChild();>
+<input id="b4" type="button" value="get objt2.firstChild.nodeValue"  size='40' onclick=  gett2firstChild();>
+<input id="b5" type="button" value="get form f.ft.value t2"  onclick=  gett2();>
+<br>
+<input id="b5" type="button" value="get value, get innerHTML"  onclick=  gett2_innHTML();>
+<input id="b6" type="button" value="get value замена по innerHTML"  onclick=  set_innHTML();>
+<input id="b7" type="button" value="add"  onclick=  addtext("idtext","1234567");>
+<input id="binner" type="button" value="by inner to <p>"  onclick= p1_innHTML();>   <!--  111111  -->
+
+
+
+<p  id="p1" name="np1" >это тег p id=p1 </p>
+
+
+<form name="f">
+
+    <ul>
+    <li id='L1'>это тег li id=L1</li>
+    <br>
+     <input  id="x1" type="text" name="x"   size=80  value="это тег input type=text ..." >
+    <div  id="d1" name="nd1"  style="position:absolute; top: 5; left:460;   
+             height: 50; width:100;  background: blue;  font-size:20; color:white;  z-index:1">
+        текст:1qwerty
+    </div>
+
+    <input  id="x2" type="text" name="nx" size=8  value="rrr" >
+
+<h3>Теги  textarea t1    и     textarea t2 </h3>
+<textarea id="t1" rows=5 cols=20  >
+Текст, который будет отображаться в многострочном поле ввода
+Текст, который будет отображаться в многострочном поле ввода
+Текст, который будет отображаться в многострочном поле ввода
+</textarea>
+
+<textarea id="t2" name=ft rows=5 cols=20  >
+Текст t2 Текст t2 Текст t2 
+Текст t2 Текст t2 Текст t2  
+</textarea>
+
+<textarea id=idtext name=ft rows=3 cols=30  >
+</textarea>
+
+</form>
+
+
+</BODY></HTML>
+

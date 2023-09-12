@@ -1,0 +1,196 @@
+<html>
+<center> 
+<head>
+   <META http-equiv="Content-Type"    content="text/html; charset=windows-1251">
+
+<style type="text/css">
+  table { margin-left: auto;  margin-right: auto; position: relative;  top: 10px; }
+</style>
+</head>
+
+<body>
+     <button id="button1" onclick="beg1();" >Начать</button>   
+     <input   id="idtext" value="1000"  >  
+     <input type="button"   value="+"  id=idplus  onclick=vplusminus("+"); >  
+     <input type="button"   value="-"  id=idminus  onclick=vplusminus("-"); >      
+
+</body>
+</center>
+
+<script type="text/javascript" >
+
+var table; 
+var rows  = 5;  // Число строк
+var cells  = 5;  // Число ячеек в строке (количество столбцов)
+var hw=40; 
+
+
+
+function getvalue(id) {
+  var s; var objid= document.getElementById(id);
+  if(!objid)  return false;
+  s= objid.value;
+  if (!s) {  s= objid.firstChild.nodeValue;}
+  return s;
+}
+
+
+
+
+
+  function getbyid2(id) //создает кнопку
+  {   
+     var s= getvalue(id);
+     if(!s)  { alert(" == not set == "); return false; }
+     return s;
+  }
+
+
+  function delete2()
+  {  
+      if (typeof table !=="undefined"){
+          table.parentNode.removeChild(table);
+      }
+  }
+
+
+  //####1####  Notepad++
+  function iset(k) {
+
+   var id="bt"+k;
+   var tt= getbyid2(id);
+   //alert('надпись на кнопке='+tt+ ' k='+k);
+ 
+   var imgblank;
+   var cell= document.getElementById('c'+k);
+   var objbt= document.getElementById(id);
+   cell.removeChild(objbt);
+
+   imgblank = document.createElement("IMG");
+   imgblank.setAttribute('onclick','clickblank('+k+'); ');   
+
+   m= Math.floor(Math.random()*10)+ 1;
+   imgblank.src= m+".png"; 
+   imgblank.height=100; imgblank.width=100;
+   imgblank.id="idim"+k;  
+   imgblank.height=hw; imgblank.width=hw;  
+
+   cell.appendChild(imgblank);
+
+  }
+
+var btn;  // кнопка
+function ndobt(i,j,k) //создает кнопку
+{    var s; 
+
+      btn = document.createElement("input");
+    
+      //btn.name = 'nbt' + i + j;	
+      btn.name = 'nbt' + k;	
+      btn.id = 'c' + k;
+      var s=  btn.id;
+
+      s= 'b' + k;  btn.id = s;   btn.type = 'button';    // или submit, reset;
+      btn.value = s;
+  
+      btn.setAttribute('onclick','iset("'+k+'"); ');  // событие onclick   
+}  
+//####1####  
+
+
+var bimg=0;
+var bbtn=1;
+function cr_emptytable()   
+  {  var k=0;   var i, m;
+
+    delete2();
+
+    table = document.createElement("table");
+    table.style.background= '#FFDDDD';   
+    table.id= "idt";
+    var body = document.getElementsByTagName("body")[0];
+    table.border=1;        
+    table.align="center";  
+    tableBody = document.createElement("tbody");
+
+    // Создать все ячейки
+    k=0; 
+    for (var i = 0; i < rows; i++) {
+       var row = document.createElement("tr");  // Создать строку
+
+       for (var j = 0; j < cells; j++) { 
+          var cell = document.createElement("td");
+          k++;
+          cell.style.color="blue";   
+          cell.id="c"+k;  
+
+          cell.height=hw; cell.width=hw;  
+ 
+          if (bimg) {  //   заполнить изображенияма таблицу
+            imgblank = document.createElement("IMG");
+            imgblank.setAttribute('onclick','clickblank('+k+'); ');   
+
+            m= Math.floor(Math.random()*10)+ 1;
+            imgblank.src= m+".png"; 
+            imgblank.height=100; imgblank.width=100;
+            imgblank.id="idim"+k;  
+            imgblank.height=hw; imgblank.width=hw;  
+
+            cell.appendChild(imgblank);
+         }    
+ 
+         if (bbtn) {  //   заполнить кнопками таблицу
+             ndobt(i,j,k);
+             btn.style.width= hw;    btn.style.height= hw;
+             btn.id='bt'+k;  //mm
+             cell.appendChild(btn);  
+         }
+
+         row.appendChild(cell);
+       } 
+
+       // Добавить строку в конец элемента tbody
+       tableBody.appendChild(row);
+    } // i,j  NRow  setclick    
+
+    // Поместить <tbody> внуть <table>
+    table.appendChild(tableBody);
+    // Добавить <table> внутрь <body>
+    body.appendChild(table);
+
+vplusminus("+");
+
+}   //cell  top  table
+
+
+var Wtmtbimg;
+var tmtbimg;
+function beg1() 
+{
+    cr_emptytable();
+    tmtbimg= getvalue("idtext");   
+    Wtmtbimg = setInterval("cr_emptytable()", tmtbimg);
+}
+
+function vplusminus(z) //ssss
+{  
+   var i,j,k;  var objid; var id;
+   if(z=="+") hw+= +5;
+   if(z=="-") hw+=  -5;
+
+    k=0; 
+    for ( i = 0; i < rows; i++) {
+       for ( j = 0; j < cells; j++) {    
+          id= "idim"+k; 
+          objid= document.getElementById(id);
+          objid.width=   hw;
+          objid.height= hw;
+          k++;
+       }
+    }
+}
+
+</script>
+</html>
+
+

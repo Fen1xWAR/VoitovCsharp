@@ -1,0 +1,43 @@
+<HTML>
+<HEAD>
+  <TITLE> Степени 2, 3, ... </TITLE>
+  <SCRIPT LANGUAGE="JavaScript">
+   function  power(a,n){
+     var r= 1;       
+     for (m=1; m<=n; m++) {
+       r= r * a;
+     }
+     return a + "^" + n + " = " + r ;
+   }
+
+   function  dotb(){
+      var topower=       document.f.a.value;           // до какого основания степени
+      var howpowers= document.f.n.value;           // сколько степеней
+
+      document.write("<H1> ***       Степени 2, 3, ... , "      +    topower    +   "      *** </H1>");
+      document.write("<table border=2 name='tb1'>");
+
+      for (i=1; i<=howpowers; i++) {
+        document.write("<tr>"); 
+        for (j=2; j<=topower; j++) {
+           st= power(j,i);
+           s= "<td>" + st + "</td>";
+           document.write(s);
+        }
+      document.write("</tr>"); 
+      }
+      document.write("</table>");
+   }
+ </SCRIPT>
+</HEAD>
+
+<BODY>
+<H1> ***       Степени 2, 3, ...       *** </H1>
+<input type="button" value="нажми" onclick=  dotb();>
+<form name="f">
+n:<input type="text" name="n"  size='8' value="10" >
+a:<input type="text" name="a"   size='8' value="5" >
+</form >
+</BODY>
+</HTML>
+

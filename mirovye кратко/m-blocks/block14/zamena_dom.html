@@ -1,0 +1,47 @@
+<HTML><HEAD>
+  <TITLE> getElementById</TITLE>
+</HEAD>
+<BODY>
+ <SCRIPT LANGUAGE="JavaScript">
+   function   prDOM(){
+      var obj= document.getElementById("p1");  
+      obj.firstChild.nodeValue= "Мы заменили текст в объекте p id=1";
+
+      var obj= document.getElementById("L1");  
+      obj.firstChild.nodeValue= "мы изменили текст в объекте LI  id=L1";
+
+      var obj= document.getElementById("x1");  
+      obj.value= "мы изменили текст в объекте <input  id='x1'  type='text'  id='d1'  ";
+
+      var obj= document.getElementById("d1");  
+      obj.firstChild.nodeValue= "мы изменили текст в объекте div  id=d1";
+
+      var obj= document.getElementById("b1");  
+      obj.firstChild.nodeValue= "qq";
+   }
+ </SCRIPT>
+
+<H1>  ЗАМЕНА </H1>
+<input id="b1" type="button" value=" Замена"  size='40' onclick=  prDOM();>
+<input id="b1" type="button" value=" ddd"  size='20' onclick=  prDOM();>
+<p  id="p1" name="np1" >это тег p id=p1 </p>
+<form name="f">
+    <ul>
+    <li id='L1'>это тег li id=L1</li>
+    <br>
+     <input  id="x1" type="text" name="x"   size=80%  value="это тег input type=text ..." >
+    <div  id="d1" name="nd1"  style="position:absolute; top: 57; left:360;   height: 50; width:100;  background: blue;  font-size:20; color:white; z-index:1">
+      Это тег div id=d1
+    </div>
+     <input  id="x2" type="text" name="nx"   size=80  value="rrr" >
+
+<h3>Тег textarea </h3>
+<textarea id="t1" rows=5 cols=20  >
+Текст, который будет отображаться в многострочном поле ввода
+Текст, который будет отображаться в многострочном поле ввода
+Текст, который будет отображаться в многострочном поле ввода
+</textarea>
+
+</form>
+</BODY></HTML>
+

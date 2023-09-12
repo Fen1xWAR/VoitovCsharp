@@ -1,0 +1,34 @@
+<HTML>
+<HEAD>
+  <TITLE> Вычисление sum2</TITLE>
+  <SCRIPT LANGUAGE="JavaScript">
+
+
+   function getvalue(id) {
+     var S1; var objid= document.getElementById(id);
+     S1= objid.value;
+     //if (!S1) {  S1= objid.firstChild.nodeValue;}
+     return S1;
+   }
+
+   function  dof(){
+      n= getvalue("v1")
+      alert("n="+n);
+
+      sum2=0;
+      for (i=1; i<=n; i++){
+         sum2= sum2 + i*i;
+      }
+      alert("sum2="+sum2);
+   }
+
+ </SCRIPT>
+</HEAD>
+
+<BODY>
+
+n:<input type="text" id="v1"  size='8' value="4" >
+<input type="button" value="вычислить сумму квадратов"   onclick= dof();>
+
+</BODY>
+</HTML>

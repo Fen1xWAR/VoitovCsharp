@@ -1,0 +1,48 @@
+<HTML>
+<HEAD>
+  <TITLE> Вычисление exp</TITLE>
+  <SCRIPT LANGUAGE="JavaScript">
+
+   function  doexp(){
+      for (i=0; i<5; i++){
+         L= Math.floor(Math.random()*2);
+         alert("L="+L);
+      }
+      x= parseFloat(document.f.xexp.value);     
+      E= document.f.eps.value;
+      vexp = Math.exp(x);
+      st=  " Вычисление e^x  с помощью встроенной функции exp(x)= " + vexp;
+
+      var   n = 1;
+      var   S = 1;
+      an = x;  
+      while (Math.abs(an)>E) {
+        S= S + an;
+        n= n+1;
+        an= an * x / n ;
+      };
+
+      document.f.t.value= st + "\n"  + " Вычисление e^x  с помощью ряда S= " + S;
+   }
+
+ </SCRIPT>
+</HEAD>
+
+<BODY>
+
+<H3>  Мы сравниваем: </H3>
+<H4> 1. Вычисление e^x с помощью встроенной функции exp(x)</H4>
+<H4> 2. Вычисление (используется цикл while) e^x с помощью ряда:&nbsp;&nbsp;&nbsp;
+        S= 1 + x^1/1! + x^2/2! + x^3/3! + x^4/4! +... </H4>
+
+<input type="button" value="вычислить"  size='40' onclick= doexp();>
+<form name="f">
+x:<input type="text" name="xexp"  size='8' value="1.0" >
+&nbsp;&nbsp;погрешность вычисления:<input type="text" name="eps" size='8' value="0.00001" >
+<br><br>
+<textarea name="t" cols=100% rows="5" class="fieldmail" >
+</textarea>
+</form>
+
+</BODY>
+</HTML>

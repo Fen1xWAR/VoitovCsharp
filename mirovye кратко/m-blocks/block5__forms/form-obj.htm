@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "=//W3C//DTD HTML 4.01 //EN http://www.w3.org/TR/HTML4/strict.dtd">
+<html>
+<head>
+<title>Элементы управления</title> 
+</head>
+<body>
+<h2> Определение элементов управления на форме </h2>
+<form action=script.htm method="post">
+
+<h3>Тег input с типами: text, password, checkbox, file</h3>
+<p>Поле для ввода строки текста<input type="text" name="name1"  ></p>
+<p>Поле для ввода пароля<input type="password" name="name2"  ></p>
+<p>Переключатель<input type="checkbox" name="name3"  value="checked"></p>
+<p>Файл<input type="file" name="namef"  ></p>
+
+<h3>Группа радиокнопок</h3>
+<p>Вариант 1 <input type="radio" name="group1" value="check1"  ></p>
+<p>Вариант 2 <input type="radio" name="group1" value="check2" checked ></p>
+<p>Вариант 3 <input type="radio" name="group1" value="check3" ></p>
+
+<h3>Кнопоки, рисунок, выпадающий список</h3>
+<input type="submit" value="Отправить1"  >
+<input type="reset" value="Очистить"  >
+<input type="button" value="Кнопка"  >
+<input type="image" src="book.bmp"  >
+<select name="menu1"  >
+<option  value="sel1"  >1 пункт</option>
+<option  value="sel2" selected >2 пункт</option>
+<option  value="sel3"  >3 пункт</option>
+</select>
+<input type="submit" value="Отправить2"  >
+
+<h3>Объект textarea</h3>
+<textarea rows=5 cols=20  >
+Текст, который будет отображаться в многострочном поле ввода
+</textarea>
+</form>
+</body>
+</html>
+

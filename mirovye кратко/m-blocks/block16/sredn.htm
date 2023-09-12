@@ -1,0 +1,26 @@
+<HTML>
+<HEAD>
+  <TITLE>Пример вычисления среднего случайных чисел</TITLE>
+</HEAD>
+<BODY>
+
+<H1>  </H1>
+<P> Получаем несколько случайных чисел с помощью генератора случайных чисел. Подсчитываем их среднее.</p>
+
+ <SCRIPT LANGUAGE="JavaScript">
+ total= 0;
+ for (i=0; i<5000; i++) {
+      num = Math.random();
+      total+= num;
+      document.status= "Сгенерировано " + i + " чисел";
+    }
+ average=  total/5000;
+ average=  Math.round(average*1000000)/1000000;
+ 
+ document.write("<H2>  среднее чисел =" + average + "</H2>"); 
+
+ </SCRIPT>
+
+</BODY>
+</HTML>
+

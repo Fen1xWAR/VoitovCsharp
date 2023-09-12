@@ -1,0 +1,39 @@
+
+
+<html>
+<body>
+
+<h3> Объекты </h3>
+ <SCRIPT LANGUAGE="JavaScript">
+
+function doobj(id,name)
+{
+    this._id = id;
+    this._name = name;
+    this.defaultvalue = "MyDefaultValue"; 
+    
+    //Получение текущего значения
+    this.getDefaultValue = function()
+    {
+        return this.defaultvalue;
+    }
+    
+    //Установка нового значения
+    this.setDefaultValue = function(newvalue)
+    {
+        this.defaultvalue = newvalue;
+    }
+    
+    //Произвольная функция
+    this.sum = function(a, b)
+    {
+        return (a+b);
+    }
+}
+
+doobj('id1','nm1');
+alert("=www=");
+ </SCRIPT>
+
+</body>
+</html> 

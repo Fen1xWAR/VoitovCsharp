@@ -1,0 +1,8 @@
+1.  hosts:             D:\WINNT\system32\drivers\etc\hosts
+2.  httpd.conf:    D:\program files\APACHE group\Apache\conf\httpd.conf
+
+3. E:\home\localhost\www\tests\tests.html
+
+
+
+C:\WebServers\usr\local\apache\conf

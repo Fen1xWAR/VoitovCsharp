@@ -1,0 +1,68 @@
+<HTML>
+<HEAD>
+  <TITLE>Таблица умножения</TITLE>
+</HEAD>
+<BODY>
+
+ <SCRIPT LANGUAGE="JavaScript">
+
+ function  foronclick(v){
+  var i,st;
+
+  for (j=1; j<=10; j++) {
+      st= "";
+      for (i=1; i<11; i++) {
+         st=  st+ j + "*" + i + "=" + j * i + "\n";
+      }
+   
+      switch (j) {
+         case 1 :   document.form1.ta1.value=st;     break;
+         case 2 :   document.form1.ta2.value=st;     break;
+         case 3 :   document.form1.ta3.value=st;     break;
+         case 4 :   document.form1.ta4.value=st;     break;
+         case 5 :   document.form1.ta5.value=st;     break;
+         case 6 :   document.form1.ta6.value=st;     break;
+         case 7 :   document.form1.ta7.value=st;     break;
+         case 8 :   document.form1.ta8.value=st;     break;
+         case 9 :   document.form1.ta9.value=st;     break;
+         case 10 :  document.form1.ta10.value=st;    break;
+      }
+  }
+
+  return "";
+ }
+
+ </SCRIPT>
+
+<input type="button" value="Создать таблицу умножения" onclick=  foronclick(3);>
+<br>
+<form name="form1">
+<textarea  rows=10 cols=10 name="ta1"   >
+</textarea>
+<textarea  rows=10 cols=10 name="ta2"   >
+</textarea>
+<textarea  rows=10 cols=10 name="ta3"   >
+</textarea>
+<textarea  rows=10 cols=10 name="ta4"  >
+</textarea>
+<textarea  rows=10 cols=10 name="ta5"    >
+</textarea>
+
+<br>
+
+<textarea  rows=10 cols=10 name="ta6"   >
+</textarea>
+<textarea  rows=10 cols=10 name="ta7"  >
+</textarea>
+<textarea  rows=10 cols=10 name="ta8"    >
+</textarea>
+<textarea  rows=10 cols=10 name="ta9"   >
+</textarea>
+<textarea  rows=10 cols=10 name="ta10"    >
+</textarea>
+
+</form>
+ 
+</BODY>
+</HTML>
+

@@ -1,0 +1,66 @@
+<HTML>
+<HEAD><TITLE>Отображение даты</TITLE></HEAD>
+<BODY>
+<H1>!Текущее время и дата   </H1>
+<p>
+ <SCRIPT LANGUAGE="JavaScript">
+var Ncurr=0, Nold=0;
+
+var msg="Над всей Испанией безоблачное небо";
+var spacer="...                      ...";
+var pos=0;
+var d2=  Date(5, 30, 2007);   
+//var d= d2.getDate();
+  
+// *
+function ScrollMessage(){
+ window.status=
+   msg.substring(pos,msg.length) + spacer +
+   msg.substring(0,pos);
+   pos++;
+   if (pos>msg.length) pos=0;
+   //window.setTimeout("ScrollMessage()",10);
+   //}
+
+        now = new Date();
+        localtime=now.toString();
+
+        utctime=now.toGMTString();  
+// Как и toUTCString, toGMTString возвращает строку, 
+// содержащее текстовое представление даты и времени по Гринвичу
+// на английском языке в американском формате.
+
+        hours=now.getHours();
+        mins=now.getMinutes();
+        secs=now.getSeconds();
+
+        document.write("<b>Текущее время: </b>" +  localtime + "<BR>");
+        document.write("<b>Абсолютное время: </b>" + utctime + "</p>");
+
+        document.write("<font size='+5'>");
+        document.write(hours + ":" +  mins +  ":"  +  secs);
+        document.write("</font>");
+   window.setTimeout("ScrollMessage()",1000);
+   }
+
+
+   ScrollMessage();
+
+//  **
+
+function bt(){
+  var d;
+  Ncurr = new Date();
+  Nold= Ncurr;
+  d= Ncurr - Nold;
+  alert("Nold="+Nold+" \n Ncurr="+Ncurr+"\n d="+d );
+}
+
+
+ </SCRIPT>
+
+<input type="button" id="Pn30"; value="start"  onclick=bt(); >
+
+
+</BODY>
+</HTML>

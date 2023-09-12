@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+   <META http-equiv="Content-Type"    content="text/html; charset=windows-1251">
+<!--
+Одновременное использование разных классов
+К любому html-тегу можно одновременно добавить несколько классов. 
+Для этого в атрибуте тега class их нужно указать через пробел. 
+В случае использования одинаковых правил стилей в разных классах, 
+но с одинаковыми значениями, для форматирования будут использовано 
+правило указанное в коде стиля ниже.
+
+Создадим облако тегов применяя два класса к одноме тегу:
+-->
+
+<html>
+<head>
+	<title>Классы в CSS</title>
+	<style>
+		a.tag { color: #449C70; /* Цвет ссылок */ }
+		.level-1 { font-size: 1em; }
+		.level-2 { font-size: 1.3em; }
+		.level-3 { font-size: 1.6em; }
+		.level-4 { font-size: 1.9em; }
+		.level-5 { font-size: 2.1em; }
+	</style>
+</head>
+<body>
+
+<div>
+<a href="/CSS/" class="tag level-5">CSS</a> <br>
+<a href="/CSS/selectors.php" class="tag level-4">Селекторы</a>  <br>
+<a href="/CSS/tsveta_v_css.php" class="tag level-3">Цвета в CSS</a>
+<a href="/CSS/tablitsa_tsvetov_v_css_i_html.php" class="tag level-3">Таблица цветов</a> <br>
+<a href="/CSS/rabota_s_tekstom.php" class="tag level-2">Работа с текстом</a> <br>
+<a href="/CSS/blochnaja_model_v_css.php" class="tag level-1">Блочная модель CSS</a>
+</div>
+
+</body>
+</html>

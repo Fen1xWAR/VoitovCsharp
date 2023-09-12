@@ -1,0 +1,17 @@
+<html>
+   <head>
+      <title>Изменить кнопку</title>
+      <style type="text/css">
+         .over {color:yellow; background:navy; value="dd";}
+         .down {color:yellow; background:red; font-style:italic; value="mmm";}
+      </style >
+   </head>
+   <body>
+      <input type=button value="Меняем вид кнопки"
+         onmouseover="this.className = 'over';"  
+         onmouseout="this.className = '';"       
+         onmousedown="this.className = 'down';"  
+         onmouseup="this.className = 'over';"
+      >   
+   </body>
+</html>

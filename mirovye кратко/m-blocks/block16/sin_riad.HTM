@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+  <TITLE> Вычисление SIN</TITLE>
+  <SCRIPT LANGUAGE="JavaScript">
+
+   function  dosin(){
+      x= parseFloat(document.f.xsin.value);     
+      E= document.f.eps.value;
+      vsin = Math.sin(x);
+      st=  " Вычисление sin(x) с помощью встроенной функции =" + vsin;
+
+      var   n = 1;
+      var   S = 0;
+      an = x;  
+      while (Math.abs(an)>E) {
+        S= S + an;
+        n= n+1;
+        an= -an * x * x / ( (2*n - 1)*(2*n - 2) );
+      };
+
+      document.f.t.value= st + "\n"  + "  Вычисление с помощью ряда S= " + S;
+
+   }
+
+ </SCRIPT>
+</HEAD>
+
+<BODY>
+
+<H1>  Мы сравниваем: </H1>
+<H4> 1. Вычисление sin x с помощью встроенной функции sin(x)  </H4>
+<H4> 2. Вычисление sin x с помощью ряда  x - x^3/3! + x^5/5! -x^7/7! +... </H4>
+
+<input type="button" value="sin x"  size='40' onclick=  dosin();>
+<form name="f">
+x:<input type="text" name="xsin"  size='8' value="3.14195" >
+eps:<input type="text" name="eps"   size='8' value="0.00001" >
+<br><br>
+<textarea name="t" cols=100% rows="5" class="fieldmail" >
+</textarea>
+</form>
+
+</BODY>
+</HTML>

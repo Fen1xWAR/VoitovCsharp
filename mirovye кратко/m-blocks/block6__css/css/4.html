@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+   <META http-equiv="Content-Type"    content="text/html; charset=windows-1251">
+
+<html>
+<head>
+	<title>Классы в CSS</title>
+	<style>  
+		table {
+			width: 300px;
+			border: 1px solid navy;
+		}
+		th {
+			background: #519E70; /* Цвет фона */
+		}
+		tr.zebra {
+			background: #C4E1CF; /* Цвет фона */
+		}
+
+         .over {color:yellow; background:navy}
+         .down {color:yellow; background:red; font-style:italic}
+
+	</style>
+</head>
+<body>
+
+<h3> Города
+<table id=tid  align=center>
+<tr>
+	<th>Страна</th>
+	<th>Город</th>
+	<th>Население</th>
+</tr>
+<tr>
+	<td>Япония</td>
+	<td>Токио</td>
+	<td> 13 370 198</td>
+</tr>
+<tr class="zebra">
+	<td>Англия</td>
+	<td>Лондон</td>
+	<td>8,6 млн</td>
+</tr>
+<tr>
+	<td>Китай</td>
+	<td>Пекин</td>
+	<td>17,3 млн</td>
+</tr>
+<tr class="zebra">
+	<td>Россия</td>
+	<td>Москва</td>
+	<td>12 380 66</td>
+</tr>
+</table>
+
+
+      <P ID="p1" STYLE="text-indent:.5in; color:red">
+         Это красный параграф с half-inch идентификатором.
+      </P>
+
+
+      <P ID="p2">
+        Это параграф имеет внешний вид "по умолчанию". Щелкните
+         <INPUT TYPE=BUTTON VALUE="здесь"
+            ONCLICK="{
+                 document.all.tid.style.cssText=document.all.p1.style.cssText ;
+                 document.all.p2.style.cssText=document.all.p1.style.cssText ;
+               }">
+         чтобы сделать этот параграф таким же как первый параграф.
+               document.all.p1.style.cssText   
+
+      </P>
+
+</body>
+</html>

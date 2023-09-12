@@ -1,0 +1,220 @@
+<!DOCTYPE HTML PUBLIC "=//W3C//DTD HTML 4.01 //EN http://www.w3.org/TR/HTML4/strict.dtd">
+<html>
+  <head>  
+    <title>!Рисунки и текст </title>
+
+<!--   
+Мигающая кнопка на чистом CSS
+миганиеhttps://www.yandex.ru/search/?lr=213&text=html%20%D0%BC%D0%B8%D0%B3%D0%B0%D1%8E%D1%89%D0%B8%D0%B9%20%D1%84%D0%BE%D0%BD
+-->
+  <style type= "text/css">
+	
+@-webkit-keyframes rainbow {
+	0% {background: #a6ce20;}
+	50% {background: #000}
+	100% {background: #a6ce20;}
+}
+ 
+@keyframes rainbow {
+	0% {background: #a6ce20;}
+	50% {background: #000}
+	100% {background: #a6ce20;}
+} 
+ 
+#stolik {
+	background: #a6ce20;
+	line-height: 70px;
+	display: block;
+	height: 70px;
+	width: 400px;
+	padding-right: 25px;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 32px;
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 0px auto;
+	webkit-animation: rainbow 2s linear 2s infinite;
+	animation: rainbow 2s linear 2s infinite;
+}
+ 
+@-webkit-keyframes rainbow1 {
+	0% {background: #000;}
+	50% {background: #a6ce20}
+	100% {background: #000;} 
+} 
+ 
+@keyframes rainbow1 {
+	0% {background: #000;}
+	50% {background: #a6ce20}
+	100% {background: #000;} 
+} 
+ 
+#stolik span {
+	background: #000;
+	display: block;
+	float: left;
+	margin-right: 25px;
+	text-align: center;
+	height: 70px;
+	width: 70px;
+	webkit-animation: rainbow1 2s linear 2s infinite;
+	animation: rainbow1 2s linear 2s infinite;
+}
+ 
+#stolik img {
+	vertical-align: middle;
+	margin-top: 8px;
+}
+
+  </style>
+
+
+  </head>
+  <body  >   
+
+<script type="text/javascript" >
+
+//***************  vid  *********************
+function dovis(v,id) {
+       var  objid= document.getElementById(id);
+       if (v==1) { objid.style.display= "block";}
+       else {objid.style.display= "none";}
+}
+
+function setChildvalue(id,val) { 
+      var objid= document.getElementById(id);
+      objid.firstChild.nodeValue= val;
+      objid.style.display= "block";  
+}
+
+
+   function  dovid(){
+      //alert("qq");
+      dovis(1,"br2")
+   }
+
+   function  donovid(){
+      dovis(0,"br2")
+   }
+
+   var m=0;
+   function  migint(){
+     if (m>5) return;
+     k= m % 2;   m++;
+     dovis(k,"br1"); dovis(k,"br2"); dovis(k,"br3"); dovis(k,"br4");
+   }
+
+   var Wtm3white = 0;
+   var dd=0;
+
+   function  prqq2() {
+        if (dd > 13) { window.clearInterval(Wtm3white); dd=0;  return; }  
+        k= dd % 2;   dd++;
+        dovis(k,"br1"); dovis(k,"br2"); dovis(k,"br3"); //dovis(k,"br4");
+        //alert("!прошли 5 секунд dd="+dd);
+  }
+
+   function  qq2() {
+          Wtm3white = setInterval('prqq2()', 400);
+          //alert("==qq===");
+   }
+
+
+//***************  end vid  *********************
+
+
+
+var hw=40; 
+
+function vplusminus(z) //ssss
+{  
+   //alert("=qq= z="+z);
+   var i,j,k;  var objid; var id;
+   if(z=="+") hw+= +5;
+   if(z=="-")  hw+=  -5;
+          k=1;
+          id= "b"+k;   // b1.png
+   //alert("=qq id="+id);
+          objid= document.getElementById(id);
+   //alert("=qq 2  objid="+ objid);
+          objid.width=   hw;
+   //alert("=qq 3  objid="+ objid.width);
+          objid.height= hw;
+}
+
+
+
+
+	// function go() { alert('Я сработало') }
+	 
+	// function on() {
+	//     timeoutId = setTimeout(go, 3000)
+	// }
+	// function off() {s
+	//     clearTimeout(timeoutId)
+	// }
+
+
+
+</script>
+
+
+<a href="#" id="stolik"><span><img src="b1.png" /></span>miganie</a>
+<center>
+     <button id="button1" onclick="beg1();" >Начать</button>   
+     <input   id="idtext" value="1000"  >  
+     <input type="button"   value="+"  id=idplus  onclick=vplusminus("+"); >  
+     <input type="button"   value="-"  id=idminus  onclick=vplusminus("-"); >  
+     <input type="button"   value="mig"  id=idminus  onclick=mig(); >  
+
+<input type="button" value="видим <i>" onclick=  dovid();>
+<input type="button" value="не видим <i>" onclick=  donovid();>
+<input type="button" value="migint " onclick="m=0; setInterval('migint()',200);" >
+
+<input type="button" value="qq2" onclick=qq2() >
+
+<br>
+<li> mmmmmmmmmmmmmm
+<!-- =============  -->
+	<input type="button" onclick="on()" value="!!!!!!Запустить таймаут"/>
+	<input type="button" onclick="off()" value="Остановить отсчет"/>
+<!-- =============  -->
+
+
+
+<table border=2 align=center>
+<tr>
+  <td><img id=br1 src="b1.png" width=100 height=100 ></td>
+  <td><img id=br2 src="b2.png" width=100 height=100 ></td>
+  <td><img id=br3 src="b3.png" width=100 height=100 ></td>
+  <td><img id=br4 src="b4.png" width=100 height=100 ></td>
+</tr>
+<tr>
+  <td><img id=br5 src="b1.png" width=100 height=100 ></td>
+  <td><img id=br6 src="b2.png" width=100 height=100 ></td>
+  <td><img id=br7 src="b3.png" width=100 height=100 ></td>
+  <td><img id=br8 src="b4.png" width=100 height=100 ></td>
+</tr>
+<tr>
+  <td><img id=br9 src="b1.png" width=100 height=100 ></td>
+  <td><img id=br10 src="b2.png" width=100 height=100 ></td>
+  <td><img id=br11 src="b3.png" width=100 height=100 ></td>
+  <td><img id=br12 src="b4.png" width=100 height=100 ></td>
+</tr>
+</table>
+
+
+  <p>Это текст, который обтекает рисунок.
+  <input type="image" src="cnt.gif"  >
+Это текст, который обтекает рисунок. 
+<br>
+  <input id="b1" type="image" src="b1.png"  >
+  <input id="b2" type="image" src="b2.png"  >
+  <input id="b3" type="image" src="b3.png"  >
+  <input id="b4" type="image" src="b4.png"  >
+  </p>
+</center>
+  </body>
+</html>

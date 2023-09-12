@@ -1,0 +1,35 @@
+<HTML>
+<HEAD>
+  <TITLE>Строка</TITLE>
+</HEAD>
+<BODY>
+
+ <SCRIPT LANGUAGE="JavaScript">
+ var word2;
+ var strArray;
+
+ function  bonclick(){
+  //alert("qq");
+  var msg="105,106,103,104:жсззокксжоск";
+  let firstPos = msg.indexOf(":");
+  let word = msg.substring(0, firstPos);
+  //let word2 = msg.substring(firstPos+1,msg.length);
+  word2 = msg.substring(firstPos+1,msg.length);
+
+  alert("firstPos="+firstPos+" word="+word+" word2="+word2);
+
+  //var strArray = msg.split(":");
+  strArray = msg.split(":");
+  for(var s in strArray){
+       alert("s="+s+ "   strArray[s]="+strArray[s]);
+  }
+
+  return "";
+ }
+ </SCRIPT>
+
+ <input type="button" value="начнем" onclick=  bonclick();>
+ 
+</BODY>
+</HTML>
+

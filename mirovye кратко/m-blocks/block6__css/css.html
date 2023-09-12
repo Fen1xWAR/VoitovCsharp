@@ -1,0 +1,116 @@
+<HTML>
+  <HEAD>
+
+    <TITLE>CSS</TITLE>
+    <STYLE TYPE="text/css">
+    P {font-size:200%; text-align:left; background:green} /*    Это комментарий  */
+    .nmcl {font-weight: bold; color:red}  /* .nmcl  задает имя класса  */
+    .nmcl2 {font-weight: bold; color:#00ff00 }  /*  14.30 ПК кольц  */
+    .nmcl3 {font-weight: bold; color:#0000ff }  /*  14.30 ПК кольц  */
+    .cl0 {font-weight: bold; color:#00f; background:#f00 } 
+    .CL1 {font-weight: bold; color:#00f } 
+    .CL2 {font-weight: bold; color:#0f0 } 
+    p.pcolor { font-weight: bold; color:red; font-family:"Courier New";  background:#0F0 }   /*  Ariel   */
+
+    .CL3 {font-weight: bold; color:#f00 } 
+    </STYLE>
+     <LINK REL="stylesheet" TYPE="text/css" HREF="f.css" >
+
+  </HEAD>
+
+  <BODY>
+    <p STYLE="font-size:120%; text-align:center; background:yellow; color:blue"  /*    Это комментарий */ >
+      Таблицы внутренних стилей ( непосредственно в абзаце): 
+      Данный параграф выравнен и окрашен в желтый цвет.
+    </p>
+    <p>
+       Таблица глобальных стилей:
+       Данный параграф выравнен по левому краю и окрашен в зеленый цвет.
+    </p>
+    <p class="pcolor">
+      Данный параграф выполнен по классу p.pcolor. В селекторе совмещение использования тега и класса!
+    </p>
+
+    <p class="CL0">
+      Данный параграф выполнен по классу CL0 !!!!
+    </p>
+
+
+<H1>Заголовок первого уровня </H1>
+<H2>Заголовок второго уровня </H2>
+<H3>Заголовок третьего уровня </H3>
+<H4>Заголовок четвертого уровня </H4>
+<H5>Заголовок пятого уровня </H5>
+<H6>Заголовок шестого уровня </H6>
+
+<table border=1 width=100%>
+  <tr class=nmcl>
+     <td width=50%>1111 </td>     <td width=25%>2222 </td>     <td width=25%> 3333</td>
+  </tr>
+  <tr>
+    <td class="nmcl3" width=25%>1111 </td>  <td class=nmcl width=25%>2222 </td> <td class=nmcl2 width=50%> 3333</td>
+  </tr>
+  <tr>
+     <td>1111 </td>     <td>2222 </td>     <td> 3333</td>
+  </tr>
+  <tr>
+     <td class="CL1">1111 </td>     <td class=CL2>2222 </td>     <td class=CL3> 3333</td>
+  </tr>
+  <tr>
+     <td class="special">Использование Таблицы связанных стилей </td>     <td >2222 </td>     <td> 3333</td>
+  </tr>
+
+</table>
+
+<br><br><br>
+
+<table  width=100%>
+  <tr class=nmcl>
+  
+     <td width=25%>
+       <img  name="n2" alt="Отображение заголовков"  src="book.bmp" align=center 
+        STYLE="border:2px solid blue " 
+        usemap=#map0 width="164" height="95" 
+       >
+       <map name="map0">
+       <area href="zagolovk.html" shape="rect" coords="1, 1, 1000, 1000" alt="Отображение заголовков" >
+       </map>
+     </td>     
+     <td width=25% align=center > Это библиотека </td>     
+     
+     <td width=25%> 
+       <img  name="n2" alt="Отображение заголовков"  src="book.bmp" align=center
+        STYLE="border:2px solid blue " 
+        usemap=#map0 width="164" height="95" 
+       >
+      <map name="map0">
+      <area href="zagolovk.html" shape="rect" coords="1, 1, 1000, 1000" alt="Отображение заголовков" >
+      </map>
+     </td>
+     
+  </tr>
+</table>
+
+<br>
+<p STYLE="font-size:120%; text-align:center; color:red;  background:white;" >
+А это - фруктовый РАЙ!
+</p>
+<br>
+
+<table align="center" width=50%>
+  <tr class=nmcl>
+  
+     <td width=25%>
+      <IMG align=center ID="ad3" SRC="a.jpg" STYLE="border:2px solid navy"  usemap=#map1 >
+      <map name="map1">
+      <area href="zagolovk.html" shape="rect" coords="1,1,100,100" alt="1" >
+      <area href="teg_body.html" shape="circle" coords="200,200,150" alt="2" >
+      <area href="1.htm" shape="poly" coords="1,30,10,35,1,50,1,30" alt="3" >
+      </map>     
+     </td>     
+     
+  </tr>
+</table>
+
+  </BODY>
+</HTML>

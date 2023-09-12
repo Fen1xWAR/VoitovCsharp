@@ -1,0 +1,17 @@
+<html>
+<body  onload="setInterval('blinkIt()',500)">
+<script type="text/javascript">
+function blinkIt() {
+ if (!document.all) return;
+ else {
+   for(i=0;i<document.all.tags('blink').length;i++){
+      s=document.all.tags('blink')[i];
+      s.style.visibility=(s.style.visibility=='visible')?'hidden':'visible';
+   }
+ }
+blinkIt();
+}
+</script>
+<blink>РїС—Р…РїС—Р…РїС—Р…РїС—Р…РїС—Р…РїС—Р…РїС—Р…РїС—Р… РїС—Р…РїС—Р…РїС—Р…РїС—Р…РїС—Р…</blink>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<HTML>
+<HEAD>
+  <TITLE>Пример вычисления среднего случайных чисел</TITLE>
+</HEAD>
+<BODY>
+
+<H1>  </H1>
+<P> Получаем несколько случайных чисел с помощью генератора случайных чисел. Подсчитываем их среднее.</p>
+
+ <SCRIPT LANGUAGE="JavaScript">
+
+function getRandomInRange(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+ var a= new Array(10);  
+
+ n=Math.floor(Math.random()*7)+1;
+ document.write("<H1>  n =" + n + "</H1>");
+
+ var max=3; var min=1;
+ a[1]=0; a[2]=0; a[3]=0; a[4]=0; a[5]=0; a[6]=0; a[7]=0;
+ k=500000;
+ for (i=0; i<k; i++) {
+    //m=getRandomInRange(min, max);
+    m=Math.floor(Math.random()*7) +1
+    if (m==1) a[1]+=1; 
+    if (m==2) a[2]+=1; 
+    if (m==3) a[3]+=1; 
+    if (m==4) a[4]+=1; 
+    if (m==5) a[5]+=1; 
+    if (m==6) a[6]+=1; 
+    if (m==7) a[7]+=1; 
+ }
+ document.write("<H1>  p1=" + a[1] / k + " p2=" + a[2] / k + " p3=" + a[3] / k  
+                                   + " p4=" + a[4] / k + " p5=" + a[5] / k + " p6=" + a[6] / k
+                                   + " p7=" + a[7] / k 
++  "</H1>");
+
+
+ m=getRandomInRange(min, max);
+ document.write("<H1>  m =" + m + "</H1>");
+
+ total= 0;
+ for (i=0; i<5000; i++) {
+      num = Math.random();
+      total+= num;
+      document.status= "Сгенерировано " + i + " чисел";
+    }
+ average=  total/5000;
+ average=  Math.round(average*1000000)/1000000;
+ 
+ document.write("<H2>  среднее чисел =" + average + "</H2>"); 
+
+ </SCRIPT>
+
+</BODY>
+</HTML>
+

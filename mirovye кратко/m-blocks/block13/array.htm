@@ -1,0 +1,46 @@
+<HTML>
+<HEAD>
+  <TITLE>Работа с массивами</TITLE>
+</HEAD>
+<BODY>
+
+<H3> Пример использования цикла для создания массива в диалоговрм режиме </H3>
+<P>  Введите несколько имен. В конце введите строку из одного пробела.
+     Имена будут отображены в виде упорядоченного списка.
+</p>
+
+ <SCRIPT LANGUAGE="JavaScript">
+ names= new Array();
+ i=0;
+ do {
+      next = prompt("Введите следующее имя");
+      if (next > " ") names[i]= next ;
+      i = i + 1;
+    }
+ while (next > " ");
+
+
+ n= names.length;
+ document.write("<H3> Введенно имен: " + (names.length) + " </H3>"); 
+ 
+ document.write("<H3>Введен массив имен: </H3>"); 
+ for (i=0; i<n; i++) 
+   document.write(names[i] + "<BR>");  //document.write("<LI>" + names[i] + "<BR>"); 
+
+ document.write("<H3>" + " Массив имен после сортировки: </H3>"); 
+ // Сортировка
+ for (i=1; i<=n-1; i++) 
+ for (j=1; j<=n-i; j++) {
+   if (names[j-1] > names[j]) {
+      s= names[j-1]; names[j-1]= names[j];
+      names[j]= s;
+   }
+ }
+
+ for (i=0; i<n; i++) 
+   document.write(names[i] + "<BR>");  // document.write("<LI>" + names[i] + "<BR>");
+ </SCRIPT>
+
+</BODY>
+</HTML>
+

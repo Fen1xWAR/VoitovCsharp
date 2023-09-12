@@ -1,0 +1,19 @@
+<html>
+   <head>
+      <title>Изменение атрибутов класса</title>
+      <style type="text/css">
+         .y {background:yellow; font-weight:bolder}
+         .r {background:red; font-weight:bolder}
+         .gr {background:green; font-weight:bolder}
+      </style>
+   </head>
+   <body>
+      <H2 onmouseover="this.className = 'y';" 
+          onmouseout="this.className = 'gr';">
+       <font color=blue>
+       Меняем вид текста в заголовке H1, font color=red
+       когда мышь пересекает текст (события onmouseover и onmouseout) 
+       </font>   
+      </H2>
+   </body>
+</html>

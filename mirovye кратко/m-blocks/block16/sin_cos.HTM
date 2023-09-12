@@ -1,0 +1,71 @@
+<HTML>
+<HEAD>
+  <TITLE> Вычисление тригонометрических функций</TITLE>
+  <SCRIPT LANGUAGE="JavaScript">
+
+   function  dosin(){
+      var pi  = Math.PI;
+      var pi6= pi/6;
+      var pi4= pi/4;
+      var pi3= pi/3;
+      var pi2= pi/2;
+
+      document.f.n.value= pi;
+
+      ss= "sin 0 = " + Math.sin(0);
+      ss= ss + "\n" + "cos 0 = " + Math.cos(0);
+      ss= ss + "\n" + "tan 0 = " + Math.tan(0);
+      ss= ss + "\n" + "log 10 = " + Math.log(10);
+      ss= ss + "\n" + "pow(2.7,2.3) = " + Math.pow(2.7,2.3);
+      document.f.ta1.value= ss;
+
+      ss= "sin(pi/6) = " +  Math.ceil(Math.sin(pi6) * 100)/100;
+      ss= ss + "\n" + "cos(pi/6) = " + Math.ceil(Math.cos(pi6) * 100)/100;
+      ss= ss + "\n" + "tan(pi/6) = " + Math.ceil(Math.tan(pi6) * 100)/100;
+      //ss= ss + "\n" + "log 10 = " + Math.ln(10);
+      document.f.ta2.value= ss;
+
+      ss= "sin(pi/4) = " +  Math.ceil(Math.sin(pi4) * 100)/100;
+      ss= ss + "\n" + "cos(pi/4) = " + Math.ceil(Math.cos(pi4) * 100)/100;
+      ss= ss + "\n" + "tan(pi/4) = " + Math.ceil(Math.tan(pi4) * 100)/100;
+      document.f.ta3.value= ss;
+
+      ss= "sin(pi/3) = " +  Math.ceil(Math.sin(pi3) * 100)/100;
+      ss= ss + "\n" + "cos(pi/3) = " + Math.ceil(Math.cos(pi3) * 100)/100;
+      ss= ss + "\n" + "tan(pi/3) = " + Math.ceil(Math.tan(pi3) * 100)/100;
+      document.f.ta4.value= ss;
+
+      ss= "sin(pi/2) = " +  Math.ceil(Math.sin(pi2) * 100)/100;
+      ss= ss + "\n" + "cos(pi/2) = " + Math.ceil(Math.cos(pi2) * 100)/100;
+      ss= ss + "\n" + "tan(pi/2) = "  + Math.ceil(Math.tan(pi2) * 100)/100;
+      document.f.ta5.value= ss;
+   }
+
+ </SCRIPT>
+</HEAD>
+
+<BODY>
+
+<H4>  Вычисление тригонометрических функций с помощью встроенных функций  </H4>
+
+<form name="f">
+pi:<input type="text" name="n"  size='12' value="" >
+<input type="button" value="тригонометрические функции"  size='40' onclick=  dosin();>
+
+<br><br>
+
+<textarea  rows=5 cols=20 name="ta1"   >
+</textarea>
+<textarea  rows=5 cols=20 name="ta2"   >
+</textarea>
+<textarea  rows=5 cols=20 name="ta3"   >
+</textarea>
+<textarea  rows=5 cols=20 name="ta4"  >
+</textarea>
+<textarea  rows=5 cols=20 name="ta5"    >
+</textarea>
+
+</form>
+
+</BODY>
+</HTML>

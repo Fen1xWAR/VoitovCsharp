@@ -1,0 +1,49 @@
+<HTML>
+ <HEAD>
+   <META http-equiv="Content-Type"    content="text/html; charset=windows-1251">
+   <TITLE>Абсолютное позиционирование и Z-index</TITLE>
+   <SCRIPT language=JavaScript>
+   <!--
+     var tim;   // таймер
+     // Шаг перемещения по экрану
+     function Move()
+     {    var obj = document.all["move"].style;
+          var obj2 = document.all["roof"].style;
+    //Var obj3=document.getElementById("roof");
+
+
+
+           if(obj.posLeft < 500) obj.posLeft +=2;
+           else obj.posLeft =2;   
+
+           if(obj2.posLeft < 500) obj2.posLeft +=1;
+           else obj2.posLeft =2;
+           //obj2.posTop+=1; 
+     }
+   //-->
+   </SCRIPT>
+ </HEAD>
+
+ <BODY bgcolor=white text=black   onload="tim=setInterval('Move()',2)">
+   <H2>Абсолютное позиционирование и Z-index</H2>
+   <HR>
+    <DIV id=roof style="position:absolute; top:50; left:140;   height:130; width:100; background:red;  font-size:40; color: white; z-index:3">
+      Это ближе (3-ий слой)
+    </DIV>
+
+    <DIV style="position:absolute; top: 50; left:360;   height: 50; width:100;  background: blue;  font-size:20; color:white; z-index:1">
+      Это дальше (1-ый слой)
+    </DIV>
+
+    <DIV id=move style="position:absolute; top:80; left:0;  width:125;   z-index:2">
+        <IMG src=explorer.gif width="125" height="82" alt ="">
+        <IMG src=row.bmp width="225" height="20" left="20" alt ="">
+        <IMG src=cheetah.gif width="125" height="82" alt ="">
+    </DIV>
+
+    <DIV  style="position:absolute; top:80; left:650;   width:100;z-index:2">
+        <IMG src=stop.gif width="80" height="170" alt ="">
+    </DIV>
+<P>В этом документе картинка начинает двигаться по экрану сразу после загрузки документа. 
+  </BODY>
+</HTML>

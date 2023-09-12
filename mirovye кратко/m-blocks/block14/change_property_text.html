@@ -1,0 +1,23 @@
+<HTML>
+   <HEAD>
+      <TITLE>Изменение свойства cssText для текста</TITLE>
+      <STYLE TYPE="text/css">
+         .over {color:yellow; background:navy}
+         .down {color:yellow; background:red; font-style:italic}
+      </STYLE>
+
+   </HEAD>
+   <BODY>
+      <P ID="p1" STYLE="text-indent:.5in; color:red">
+         Это красный параграф с half-inch идентификатором.
+      </P>
+      <P ID="p2">
+        Это параграф имеет внешний вид "по умолчанию". Щелкните
+         <INPUT TYPE=BUTTON VALUE="здесь"
+            ONCLICK="document.all.p2.style.cssText=document.all.p1.style.cssText ;">
+         чтобы сделать этот параграф таким же как первый параграф.
+               document.all.p1.style.cssText   
+
+      </P>
+   </BODY>
+</HTML>

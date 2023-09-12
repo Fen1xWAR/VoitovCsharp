@@ -1,0 +1,49 @@
+<HTML>
+<HEAD>
+  <TITLE> Test!!! </TITLE>
+</HEAD>
+<BODY>
+
+ <SCRIPT LANGUAGE="JavaScript">
+var timerId; var timerId2;
+//  timerId= setTimeout("func()",4000);  clearTimeout(timerId);
+//  timerId= setInterval("func2()",4000); clearInterval(timerId);
+	function func() { 
+	  alert('-Hello!');
+	}
+
+	function qq() {
+                     timerId= setTimeout("func()",2000);
+                 }
+
+	function func2() { 
+	  alert('-Hello2!');
+	}
+
+	function qq2() {
+	  timerId2= setInterval("func2()", 3000);
+                 }
+
+	function clsetTimeout() {
+	  clearTimeout(timerId);
+                 }
+
+	function clsetInterval() {
+	  clearInterval(timerId2);
+                 }
+
+ </SCRIPT>
+
+<H1> Test </H1>
+
+
+<input type="button" value=" setTimeout "   onclick=  qq();>
+&nbsp
+<input type="button" value=" setInterval "  onclick=  qq2();>
+<br>
+<input type="button" value="clearTimeout" onclick=  clsetTimeout();>
+&nbsp
+<input type="button" value="clearInterval" onclick=  clsetInterval();>
+
+</BODY>
+</HTML>

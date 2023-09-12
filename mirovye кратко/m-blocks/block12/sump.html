@@ -1,0 +1,49 @@
+<HTML>
+<HEAD>
+  <TITLE> Вычисление sum2</TITLE>
+  <SCRIPT LANGUAGE="JavaScript">
+
+/*
+Найти суммы (n - число слагаемых, x –целое) 
+ S= x^1 + x^3 + x^5+ ...  x^(2n-1)
+ S= 1^2/2! + 2^2/3! + 3^2/4! + ...  n^2/(n+1)!
+*/
+
+
+   function getvalue(id) {
+     var S1; var objid= document.getElementById(id);
+     S1= objid.value;
+     return Number(S1);
+   }
+   function  doS1(){
+      var n= getvalue("v1");
+      var x= getvalue("v2");
+      px=x;
+      S1=0;
+      for (i=1; i<=n; i++){
+         //S1= Number(S1) + Number(px);
+         S1= S1 + px;
+         px= px*x*x;
+      }
+      alert("S1="+S1);
+   }
+//S= 1^2/2! + 2^2/3! + 3^2/4! + ...  n^2/(n+1)!
+   function  doS2(){
+      var n= getvalue("v1");
+      var f= 1;
+      S2=0;
+      for (i=1; i<=n; i++){
+         f= f*(i+1);
+         S2= S2 + i*i / f;
+      }
+      alert("S2="+S2);
+   }
+ </SCRIPT>
+</HEAD>
+<BODY>
+n:<input type="text" id="v1"  size='6' value="3" >
+x:<input type="text" id="v2"  size='6' value="2" >
+<input type="button" value="вычислить сумму S1"   onclick= doS1();>
+<input type="button" value="вычислить сумму S2"   onclick= doS2();>
+</BODY>
+</HTML>

@@ -1,0 +1,42 @@
+<HTML>
+<HEAD><TITLE>Отображение даты</TITLE></HEAD>
+<BODY>
+<H1>Текущее время и дата   </H1>
+<p>
+ <SCRIPT LANGUAGE="JavaScript">
+var msg="Над всей Испанией безоблачное небо";
+var spacer="...                      ...";
+var pos=0;
+
+function ScrollMessage(){
+ window.status=
+   msg.substring(pos,msg.length) + spacer +
+   msg.substring(0,pos);
+   pos++;
+   if (pos>msg.length) pos=0;
+   //window.setTimeout("ScrollMessage()",10);
+   //}
+
+        now = new Date();
+        now= 1567256831;
+alert("now="+now);
+        localtime=now.toString();
+        utctime=now.toGMTString();
+        hours=now.getHours();
+        mins=now.getMinutes();
+        secs=now.getSeconds();
+        document.write("<b>Текущее время: </b>" +  localtime + "<BR>");
+        document.write("<b>Абсолютное время: </b>" + utctime + "</p>");
+
+        document.write("<font size='+5'>");
+        document.write(hours + ":" +  mins +  ":"  +  secs);
+        document.write("</font>");
+   window.setTimeout("ScrollMessage()",10);
+   }
+
+
+   ScrollMessage();
+
+ </SCRIPT>
+</BODY>
+</HTML>

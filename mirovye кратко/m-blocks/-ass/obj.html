@@ -1,0 +1,41 @@
+<HTML>
+<HEAD>
+  <TITLE>??????????? ????</TITLE>
+</HEAD>
+<BODY>
+
+ <SCRIPT LANGUAGE="JavaScript">
+
+  function person(name,age,adr,tel,email) {
+   this.name = name;
+   this.age = age;
+   this.adr = adr;
+   this.tel = tel;
+   this.email = email;
+   this.PrintPerson = PrintPerson;
+  }
+
+  function PrintPerson() {
+   st1= "???: " + this.name + "<br>\n";
+   st2= "???????: " + this.age + "<br>\n";
+   st3= "?????: " + this.adr + "<br>\n";
+   st4= " tel: " + this.tel + "<br>\n";
+   st5= "email: " + this.email + "<br>\n";
+   document.write(st1, st2, st3, st4, st5);
+  }
+
+  function doPerson() {
+   Ivanov= new person("???? ??????", "19", "????????-38", "123-45-67"," ivanov@mail.ru ");
+   Ivanov.PrintPerson();
+   Ivanov2= new person("???? ??????2", "19", "????????-38", "123-45-67"," ivanov@mail.ru ");
+   Ivanov2.PrintPerson();
+  }
+
+ </SCRIPT>
+
+<input type="button" value="???????" onclick=  doPerson();>
+
+ 
+</BODY>
+</HTML>
+

@@ -1,0 +1,57 @@
+<HTML>
+<HEAD>
+  <TITLE> Степень </TITLE>
+</HEAD>
+<BODY>
+
+ <SCRIPT LANGUAGE="JavaScript">
+
+   function  power(a,n){
+     var r= 1;
+     var s= "";
+      
+     for (i=1; i<=n; i++) {
+       r= r * a;
+       s= s + a + "^" + i + " = " + r + "\n";
+     }
+     return s;
+   }
+
+
+   function  pn(){
+      var s= "";
+      n= document.f.n.value;      
+      a= document.f.a.value;
+      
+      for (j=2; j<=a; j++) {
+         s= s + power(j,n) + "\n";
+     }
+     document.f.t.value= s;
+   }
+
+
+   function spn(){
+     var s= 0; 
+     n= document.f.n.value;       
+     for (j=1; j<=n; j++) {
+       s= s + j*j*j; 
+     } 
+   document.f.t.value= s; 
+   }
+ </SCRIPT>
+
+<H3>Использование цикла for и функций для вычисления степени и суммы кубов</H3>
+
+<form name="f">
+<input type="button" value=" Степень"  size='40' onclick=  pn(5,4);>
+n:<input type="text" name="n"  size='8' value="10" >
+a:<input type="text" name="a"   size='8' value="5" >
+<input type="button" value=" Сумма кубов" size='40' onclick= spn();> <br><br> 
+<br><br>
+<textarea name="t" cols=30% rows="20" class="fieldmail" >
+</textarea>
+</form>
+ 
+</BODY>
+</HTML>
+

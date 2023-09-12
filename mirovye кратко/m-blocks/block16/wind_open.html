@@ -1,0 +1,36 @@
+<HTML>
+<HEAD><TITLE>Создание нового окна</TITLE>
+</HEAD>
+<BODY>
+
+ <SCRIPT LANGUAGE="JavaScript">
+   function  win(){
+     alert("window.width="+window.document.width+
+      "  window.height="+window.document.height);
+   }
+
+ </SCRIPT>
+
+<H1>Создание нового окна</H1>
+<HR>
+Для открытия и закрытия окна используйте эти кнопки
+<HR>
+<FORM NAME="winform">
+<!--  Работает:
+onClick="NewWin=window.open('..','NewWin','toolbar=no,status=no,width=100,height=200');">  
+onClick="NewWin=window.open('C:','NewWin','toolbar=no,status=no,width=100,height=200');">  
+-->
+<INPUT TYPE="button" VALUE="!!Открыть новое окно" 
+onClick="NewWin=window.open('https://mail.ru/','NewWin','toolbar=no,status=no,width=100,height=200');">  
+
+<P><INPUT TYPE="button" VALUE="Закрыть новое окно"  onClick="NewWin.close();">
+
+<P><INPUT TYPE="button" VALUE="Закрыть главное окно"  onClick="window.close();">
+
+<P><INPUT TYPE="button" VALUE="alert"
+onClick="win();">
+</FORM>
+<HR>
+</BODY>
+</HTML>
+

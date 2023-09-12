@@ -1,0 +1,48 @@
+
+
+<html>
+ <head>
+   <META http-equiv="Content-Type"    content="text/html; charset=windows-1251">
+    <script language=JavaScript>
+
+function fanc(){
+  document.getElementById("id1").checked=true;    
+  document.f1.r1[0].checked=true;
+  document.f1['r1'][0].checked=true;		
+}
+
+    </script>
+
+
+ </head>
+<body >
+<form name="f1">
+<input type="checkbox"  name="ch1">пункт1<br>
+<input type="checkbox"  name="ch2">пункт2<br>
+</form>
+
+
+<h3>Выпадающий список</h3>
+<select name="menu1"  >
+<option  value="sel1"  >1 пункт</option>
+<option  value="sel2" selected >2 пункт</option>
+<option  value="sel3"  >3 пункт</option>
+</select>
+
+<br><br><br>
+<select name="menu2"  size=5 length=300 multiple>
+<option  value="sel1"  >1 пункт</option>
+<option  value="sel2" selected >2 пункт</option>
+<option  value="sel3"  >3 пункт</option>
+</select>
+
+<form name="f2">
+Ваш пол:<br>
+<input type="radio" name="r1" id="id1">м<br>
+<input type="radio" name="r1" id="id2">ж<br>
+<input type="button" onclick="fanc()">
+</form>
+
+</body>
+</html>
+

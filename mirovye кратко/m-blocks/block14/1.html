@@ -1,0 +1,50 @@
+<html>
+<body>
+<script type="text/javascript">
+var slidespeed=2000
+var slideimages=new Array("http://htmlweb.ru/pic/sborki.gif",
+	"http://htmlweb.ru/pic/taxi.gif",
+	"http://htmlweb.ru/pic/lancom.jpg",
+	"http://kdg.htmlweb.ru/kdg88x31.gif",
+	"http://web-protect.net/prot88x31.png")
+var slidelinks=new Array("http://sborki.ru",
+	"http://VseTaksi.ru/",
+	"http://lancomRostov.ru",
+	"http://kdg.htmlweb.ru/",
+	"http://web-protect.net/")
+var whichimage=0
+var imgobj, filtersupport, blenddelay
+var imageholder=new Array()
+// загрузка картинок в массив
+for (i=0;i<slideimages.length;i++){
+	imageholder[i]=new Image()
+	imageholder[i].src=slideimages[i]
+}
+function slideit(){
+if (filtersupport) imgobj.filters[0].apply()
+imgobj.src=imageholder[whichimage].src
+imgobj.alt=slidelinks[whichimage]
+linkobj.href=slidelinks[whichimage]
+if (filtersupport) imgobj.filters[0].play()
+whichimage=(whichimage<slideimages.length-1)? whichimage+1 : 0
+setTimeout("slideit()", slidespeed+blenddelay)
+}
+
+alert("==qq==");
+window.onload=function(){
+imgobj=document.getElementById("slideshow")
+linkobj=document.getElementById("slidelink")
+filtersupport=imgobj.filters
+blenddelay=(filtersupport)? imgobj.filters[0].duration*1000 : 0
+slideit()
+}
+//-->
+</script>
+<A href="javascript://"  id="slidelink" target="_blank">
+<IMG src="http://htmlweb.ru/pic/sborki.gif" id="slideshow" alt="Адрес сайта"
+	style="filter:progid:DXImageTransform.Microsoft.Fade(duration=2);
+		border:3px solid #990000" width="88" height="31" />
+</A>
+
+</body>
+</html>

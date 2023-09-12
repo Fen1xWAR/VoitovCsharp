@@ -1,0 +1,50 @@
+<HTML>
+<HEAD>
+<TITLE>Первая форма</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+function display()  {
+  	DispWin= window.open('', 'NewWin', ' toolbar=no,status=no,width=300,height=200');
+
+	message= "<FORM name='form2'>";
+	DispWin.document.write(message);
+
+	message= "<UL><LI><B>Имя:     </B>" + document.form1.yourname.value;
+	DispWin.document.write(message);
+	message= "<LI><B>Адрес:     </B>" + document.form1.address.value;
+	DispWin.document.write(message);
+	message= "<LI><B>Тел:     </B>" + document.form1.phone.value+"</UL>";
+	DispWin.document.write(message);
+
+	message= "</FORM>";
+	DispWin.document.write(message);
+}
+
+function disp2()  {
+  ms= "Имя формы основного окна: " + document.form1.name;
+  alert(ms);
+  ms= "Имя формы созданного окна: " + DispWin.document.form2.name;
+  alert(ms);
+}
+
+</SCRIPT>
+</HEAD>
+<BODY>
+
+<H1>Основное окно</H1>
+<P><b>Введите все данные.</b> </P>
+<li>При щелчке на кнопке <b>Отобразить</b> данные отобразятся в отдельном окне.
+<li>При щелчке на кнопке <b>Информация</b> будет выдана информация о названии форм окон
+             
+<FORM name="form1">
+<B>Имя:</B><INPUT TYPE="TEXT" LENGHT="20" NAME="yourname">
+<P>
+<B>Адрес:</B><INPUT TYPE="TEXT" LENGHT="30" NAME="address">
+<P>
+<B>Тел:</B><INPUT TYPE="TEXT" LENGHT="15" NAME="phone">
+<P><INPUT TYPE="BUTTON" VALUE="Отобразить" onClick="display();">
+<P><INPUT TYPE="BUTTON" VALUE="Информация" onClick="disp2();">
+</FORM>
+
+</BODY>
+</HTML>
+

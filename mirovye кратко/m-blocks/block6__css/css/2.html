@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+   <META http-equiv="Content-Type"    content="text/html; charset=windows-1251">
+<html>
+<head>
+	<title>Классы в CSS</title>
+	<style>
+		div.menu-top {
+			position: absolute; top: 0; left: 80px; height: 50px;
+		}
+		ul.menu-top > li {
+			display: inline;	/* Располагаем элементы по горизонтали */
+			list-style: none;	/* Убираем маркеры списка */
+			padding: 5px;	/* Поля вокруг текста */
+		}
+		ul.menu-top > li > a {
+			border: 1px solid #666;		/* Параметры рамки */
+			padding: 5px;			/* Поля вокруг текста */
+			font-size: 80%;			/* Размер шрифта */
+			color: red;
+		}
+
+		div.menu-left {
+			position: absolute;
+			top: 50px; left: 0;
+		}
+		ul.menu-left {
+			padding-left: 10px;
+		}
+		ul.menu-left > li {
+			list-style: none;	/* Убираем маркеры списка */
+			padding: 5px;
+			padding-left: 0;
+		}
+		ul.menu-left > li > a {
+			background: #DEE1AE;	/* Цвет фона */
+			border: 1px solid #666;	/* Параметры рамки */
+			padding: 5px;		/* Поля вокруг текста */
+		}
+	</style>
+</head>
+<body>
+<div class="menu-top">
+<ul class="menu-top">
+		<li>Пункт 1</li>
+		<li>Пункт 2</li>
+		<li>Пункт 3</li>
+</ul>
+</div>
+
+<div class="menu-left">
+<ul class="menu-left">
+		<li>Пункт 1</li>
+		<li>Пункт 2</li>
+		<li>Пункт 3</li>
+</ul>
+</div>
+</body>
+</html>

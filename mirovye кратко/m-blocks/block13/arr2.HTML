@@ -1,0 +1,35 @@
+<HTML>
+<HEAD>
+  <TITLE> Степени 2, 3, ... </TITLE>
+  <SCRIPT LANGUAGE="JavaScript">
+
+   function  dotb(){
+      var m=       document.f.m.value;         
+      var n= document.f.n.value;           
+
+      document.write("<table border=2 name='tb1'>");
+
+      for (i=1; i<=n; i++) {
+        document.write("<tr>"); 
+        for (j=1; j<=m; j++) {
+           st=Math.floor(Math.random()*100);
+           s= "<td>" + st + "</td>";
+           document.write(s);
+        }
+      document.write("</tr>"); 
+      }
+      document.write("</table>");
+   }
+ </SCRIPT>
+</HEAD>
+
+<BODY>
+
+<input type="button" value="нажми" onclick=  dotb();>
+<form name="f">
+n:<input type="text" name="n"  size='8' value="10" >
+m:<input type="text" name="m"   size='8' value="5" >
+</form >
+</BODY>
+</HTML>
+

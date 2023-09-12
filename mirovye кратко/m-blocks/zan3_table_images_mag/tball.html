@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "=//W3C//DTD HTML 4.01 //EN http://www.w3.org/TR/HTML4/strict.dtd">
+<head>
+   <META http-equiv="Content-Type"    content="text/html; charset=windows-1251">
+
+<style type="text/css">
+  table { margin-left: auto;  margin-right: auto; position: relative;  top: 10px; }
+</style>
+</head>
+
+<body>
+
+ <input type="image" src="b1.png"  >
+  <input type="image" src="b2.png"  >
+  <input type="image" src="b3.png"  >
+  <input type="image" src="b4.png"  >
+
+
+     <button id="button1" onclick="beg1();" >Начать</button>   
+     <input   id="idtext" value="1000"  >  
+     <input type="button"   value="+"  id=idplus  onclick=vplusminus("+"); >  
+     <input type="button"   value="-"  id=idminus  onclick=vplusminus("-"); >  
+
+</body>
+</center>
+
+<script type="text/javascript" >
+
+var hw=40; 
+
+
+function getvalue(id) {
+  var s; var objid= document.getElementById(id);
+  if(!objid)  return false;
+  s= objid.value;
+  if (!s) {  s= objid.firstChild.nodeValue;}
+  return s;
+}
+
+
+  function delete2()
+  {  
+      if (typeof table !=="undefined"){
+          table.parentNode.removeChild(table);
+      }
+  }
+
+
+//####1####
+function iset(Pncr) {
+   alert('Hello:  ***  '+Pncr+' ***');
+}
+
+var btn;  // кнопка
+function ndobt(i,j) //создает кнопку
+{    var s; 
+      btn = document.createElement("input");
+    
+      btn.name = 'nbt' + i + j;	
+      s= 'b' + i + j;  btn.id = s;   btn.type = 'button';    // или submit, reset;
+      btn.value = s;
+      btn.setAttribute('onclick','iset("b'+i+''+j+'"); ');  // событие onclick 
+}  
+//####1####  
+
+
+
+function cr_emptytable()   
+  {  var k=0;   var i, m; 
+
+}   //cell  top  table
+
+
+var Wtmtbimg;
+var tmtbimg;
+function beg1() 
+{  var k=0;  
+
+alert("=qq=");
+            imgblank = document.createElement("IMG");
+            imgblank.setAttribute('onclick','clickblank('+k+'); ');   
+alert("=1qq=");
+
+            m= Math.floor(Math.random()*10)+ 1;
+            imgblank.src= m+".png"; 
+            imgblank.height=100; imgblank.width=100;
+            imgblank.id="idim"+k;  
+            imgblank.height=hw; imgblank.width=hw;  
+alert("=7qq=");
+
+
+    //Wtmtbimg = setInterval("cr_emptytable()", tmtbimg);
+}
+
+function vplusminus(z) //ssss
+{  
+   var i,j,k;  var objid; var id;
+   if(z=="+") hw+= +5;
+   if(z=="-") hw+=  -5;
+
+    k=0; 
+    for ( i = 0; i < rows; i++) {
+       for ( j = 0; j < cells; j++) {    
+          id= "idim"+k; 
+          objid= document.getElementById(id);
+          objid.width=   hw;
+          objid.height= hw;
+          k++;
+       }
+    }
+}
+
+</script>
+</html>
+
+

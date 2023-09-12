@@ -1,0 +1,121 @@
+<HTML>
+<HEAD>
+  <TITLE>Объекты DOM</TITLE>
+</HEAD>
+<BODY>
+
+<h3> Список вызова других страниц  </h3>
+<li><a href="..\block1\zagolovki.html" >Отображение заголовков</A>
+<li><a href="..\block1\p_vyravnivanie.html" >Горизонтальное выравнивание абзацев</a>
+<li><a href="..\block1\p_br.html" >Принудительный разрыв строк</a>
+<li><a href="..\block1\fonts.html" >Размер символов</a>
+
+<h3>Здесь расположено несколько рисунков  </h3>
+  <IMG name=cnt  type="image" src="cnt.gif"  >
+  <IMG name=back type="image" src="back.jpg"  >
+  <IMG name=cati type="image" src="cati.jpg"  >
+
+<h3>Здесь расположено несколько форм  </h3>
+ <form id=a1 name=f1 action=receiveform.htm method=GET>
+ <input type=text name="name1" value="Иванов1"><br>
+ </form>
+
+ <form id=a2 name="f2" action=receiveform.htm method=GET>
+ <input type=text name="name2" value="Иванов2"><br>
+ </form>
+
+ <form id=a3 name="f3" action=receiveform.htm method=GET>
+ <input type=text name="name3" value="Иванов3"><br>
+ </form>
+
+
+
+
+<h3> Объекты </h3>
+ <SCRIPT LANGUAGE="JavaScript">
+
+  document.write("<h4>Свойства объекта window.document.links (расположены до JavaScript) </h4>");
+  for (i in window.document.links) {
+      document.write("Свойство: "  + i + "    " );
+      document.write("Значение: "  + window.document.links[i]+"<br>" );
+    }
+
+  document.write("<h4>Свойства объекта window.document.forms </h4>");
+  for (i in window.document.forms) {
+      document.write("Свойство: "  + i + "    " );
+      if (i == "length")document.write(" Значение: "  + window.document.forms[i]+ "<br>" );
+      else document.write(" name= "  + window.document.forms[i].name + 
+                          " id= "    + window.document.forms[i].id   + "<br>" );
+    }
+
+  document.write("<h4>Свойства объекта window.document.images </h4>");
+  for (i in window.document.images) {
+      document.write("Свойство: "  + i + "    " );
+      if (i == "length")document.write(" Значение: "  + window.document.images[i]+ "<br>" );
+      else document.write("Значение src: "  + window.document.images[i].src +"<br>" );
+    }
+
+
+ 
+ // window.document == document  
+ document.write("<p> Страница последний раз модифицировалась:" 
+    + document.lastModified + "</p>");
+    
+ document.write("<h4>Свойства объекта навигатор (navigator) </h4>");
+ for (i in navigator) {
+      document.write("Свойство: "  + i + "    " );
+      document.write("Значение: "  + navigator[i] +"<br>" );
+    }
+    
+ document.write("<h4>Объект location (window.location)</h4>");
+ for (i in window.location) {
+      document.write("Свойство: "  + i + "    " );
+      document.write("Значение: "  + window.location[i] +"<br>" );
+    }
+    
+ document.write("<h4>Объект document (window.document)</h4>");
+ for (i in window.document) {
+      document.write("Свойство: "  + i + "    " );
+      document.write("Значение: "  + window.document[i] +"<br>" );
+    }
+    
+ document.write("<h4>Объект history (window.history)</h4>");
+ document.write("history.length: "  + history.length +"<br>" );
+ document.write("history.current: "  + history.current +"<br>" );
+ document.write("history.next: "  + history.next+"<br>" );
+ document.write("history.previous: "  + history.previous+"<br>" );
+
+ for (i in window.document) {
+      document.write("Свойство: "  + i + "    " );
+      document.write("Значение: "  + window.history[i] +"<br>" );
+    }
+    
+ 
+  document.write("<h4>Свойства объекта window.document.links </h4>");
+  // window.document.links[i] == window.document.links[i].href
+  for (i in window.document.links) {
+      document.write("Свойство: "  + i + "    " );
+      document.write("Значение: "  + window.document.links[i]+"<br>" );
+    }
+
+  document.write("<h4>Свойства объекта window.document.images </h4>");
+  // window.document.images[i] == window.document.limages[i].href
+  for (i in window.document.images) {
+      document.write("Свойство: "  + i + "    " );
+      document.write("Значение: "  + window.document.images[i] +"<br>" );
+    }
+
+    
+</SCRIPT>
+ 
+ <H2>Пример формы для передачи данных</H2>
+ <form id=am name="fsend" action=receiveform.htm method=GET>
+ Введите фамилию:
+ <input type=text name="name" value="Иванов"><br>
+ Введите возраст:
+ <input type=text name="age" value="900" size=5 ><br>
+ <input type=submit value="Нажмите кнопку!"><br>
+ </form>
+ 
+</BODY>
+</HTML>
