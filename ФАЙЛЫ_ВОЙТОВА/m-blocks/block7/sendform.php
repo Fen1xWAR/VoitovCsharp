@@ -6,10 +6,14 @@
 <body>
  <H2>Пример формы для передачи данных</H2>
  <form action=receiveform.php method=GET>
- Введите фамилию:
- <input type=text name="name" value="Иванов"><br>
- Введите возраст:
- <input type=text name="age" value="900" size=5 ><br>
+     <label for="name">Введите имя:</label>
+    <input type=text name="name" placeholder="Имя"><br>
+     <label for="surname">Введите фамилию:</label>
+     <input type=text name="surname" id="surname" placeholder="Фамилия"><br>
+     <label for="city">Родной город:</label>
+     <input type=text name="city" id="city" placeholder="Родной город"><br>
+     <label for="age">Возраст:</label>
+ <input type=text name="age" id="age" placeholder="Возраст" ><br>
  <input type=submit value="Нажмите кнопку!"><br>
  </form>
 </body>

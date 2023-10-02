@@ -1,4 +1,4 @@
-<HTML>
+<HTML lang="">
 <HEAD><TITLE>Работа с базами данных (СУБД MYSQL) </TITLE>
 </HEAD>
 <BODY>

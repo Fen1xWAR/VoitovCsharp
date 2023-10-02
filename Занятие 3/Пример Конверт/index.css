@@ -1,0 +1,90 @@
+ {
+  margin: 0px;
+}
+img {
+  width: 500px;
+  height: 500px;
+}
+.cube {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border-radius: 10%;
+  background-color: brown;
+  animation-name: cube;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes cube {
+  0%{
+    top: 150px;
+    left: 0;
+ }
+  10%{
+    top: 450px;
+    left: 0;
+ }
+  20%{
+    top: 150px;
+    left: 450px;
+    }
+30%{
+  top: 450px;
+  left: 450px;
+}
+  40%{
+    top: 450px;
+    left: 0;
+
+  }
+  50%{
+    top: 150px;
+    left: 0;
+    }
+
+  60%{
+    top: 450px;
+    left: 450px;
+  }
+  70%{
+    top: 150px;
+    left: 0;
+  }
+  80%{
+    top: 0px;
+    left: 230px;
+  }
+  90%{
+    left: 450px;
+    top: 150px;
+  }
+  100%{
+    left: 0px;
+    top: 150px;
+  }
+      /*0% {*/
+  /*  top: 150px;*/
+  /*  left: 0px;*/
+  /*}*/
+  /*20% {*/
+  /*  top: 450px;*/
+  /*  left: 0px;*/
+  /*}*/
+  /*60% {*/
+  /*  top: 450px;*/
+  /*  left: 450px;*/
+  /*}*/
+  /*80% {*/
+  /*  top: 150px;*/
+  /*  left: 450px;*/
+  /*}*/
+  /*90% {*/
+  /*  top: 0px;*/
+  /*  left: 230px;*/
+  /*}*/
+  /*100% {*/
+  /*  top: 150px;*/
+  /*  left: 0px;*/
+  /*}*/
+}

@@ -1,0 +1,35 @@
+img{
+    width: 200px;
+}
+.rect{
+    animation-name: iLikeToMovingMoving;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    background-color: orange;
+    animation-fill-mode: both;
+    position: fixed;
+    top: 45px;
+    left: 35px;
+    width: 20px;
+    height: 20px;
+}
+@keyframes iLikeToMovingMoving {
+    0%{
+        top: 45px;
+        left: 35px;
+    }
+    20%{
+        top: 135px;
+
+
+    }
+    40%{
+        left: 200px;
+    }
+    60%{
+        top: 45px;
+    }
+    80%{
+        left: 35px;
+    }
+}

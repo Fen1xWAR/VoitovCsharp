@@ -5,7 +5,7 @@
    <TITLE>TEST 6</TITLE>
      <script src="t6.js" type="text/javascript" encoding="UTF-8"></script>
    <SCRIPT language=JavaScript>
-<?	      
+       <?php
    $va=  $GLOBALS["_GET"];
    $user=  $va["user"];
    $mids=  $va["mids"];
@@ -50,9 +50,9 @@
   </H2>
 
 
-<?
+  <?php
 if ($zvuk) echo "
- <DIV id=IDbeep style='position:absolute; top:400; left:100; height:100; width:80%'>
+ <DIV id=IDbeep style='position:absolute; top:400px; left:100px; height:100px; width:80%'>
   <embed src='beep.wav' autostart='false' width='0' height='0' id='beep'
    enablejavascript='true'>
  </DIV>

@@ -11,14 +11,19 @@
   </font>
  </p>
 <?
-   $va=  $GLOBALS["_GET"];
-   $name= $va["name"];
-   $age= $va["age"];
-   $dd= $va["day"];
-echo"<li>Получена фамилия: $name"; 
-echo"<li>Получен возраст:  $age";
-echo"<li>Получен день: $dd";
-?>
 
+   $name= $_GET["name"];
+   $age= $_GET["age"];
+   $surname = $_GET["surname"];
+   $city = $_GET["city"];
+echo"<li>Получена имя: $name";
+echo"<li> Получена фамилия: $surname";
+echo"<li> Получен город: $city";
+echo"<li>Получен возраст:  $age";
+?>
+<?
+    echo "Hello"
+
+?>
 </body>
 </html>
