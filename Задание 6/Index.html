@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<wrapper>
+    <button onclick="StartDialog()" type="">Начнем?</button>
+
+</wrapper>
+</body>
+<script !src="">
+    function StartDialog() {
+        if (confirm("Уверен?")) {
+            let age =  prompt("Ну тогда начнем, сколько тебе лет?")
+            if (age == null){
+                age = 0
+            }
+            alert(`Допустим, тебе ${age} лет`)
+            if (!confirm("Достаточно?")) {
+                alert("Тогда продолжим")
+                let counter = prompt("Хорошо, сколько диалоговых окон ты уже видел?");
+                if (counter === "6") {
+                    alert("Молодец я тобой горжусь, ты запомнил это!")
+                    alert("Я думаю на этом достаточно")
+                } else {
+                    alert("Неправильно, давай еще раз")
+                    counter = prompt("Сколько диалоговых окон ты уже видел?")
+                    if (counter === "8"){
+                        alert("А ты следил! Мне нечего тебе больше сказать")
+                    }
+                    else{
+                        alert("С тех пор их стало больше")
+                        alert("Я думаю на этом достаточно")
+                    }
+
+                }
+            } else {
+                alert("Тогда тебе всего доброго и хорошего настроения")
+            }
+        } else {
+            alert("Ну и зачем нажимал?")
+        }
+    }
+</script>
+</html>
