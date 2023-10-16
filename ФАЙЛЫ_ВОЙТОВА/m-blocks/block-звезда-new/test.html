@@ -1,0 +1,79 @@
+<HTML>
+ <HEAD>
+   <META http-equiv="Content-Type"    content="text/html; charset=windows-1251">
+   <TITLE> 4.2 </TITLE>
+
+ </HEAD>
+
+ <BODY  >
+    <canvas id="memoryTestImageCanvas" width="400px" height="400px"></canvas>
+    <script src="canvtest.js" type="text/javascript" encoding="UTF-8"></script>
+
+ 
+     <SCRIPT language=JavaScript>
+      var vcan=document.getElementById("memoryTestImageCanvas");
+
+      function clz() {
+        var ncol=4; var cs=34;
+        renderImage(vcan,  ncol, cs, 0, 200, 200, 10);  
+     }
+
+      function cla() {
+        var ncol=4; var cs=35;
+        renderImage(vcan,  ncol, cs, 0, 200, 200, 10);  
+     }
+
+
+      function cl1() {
+        var ncol=1; var cs=1;
+        renderImage(vcan,  ncol, cs, 0, 0, 200, 50); 
+     }
+      function cl2() {
+        var ncol=2; var cs=2;
+        renderImage(vcan,  ncol, cs, 200, 0, 200, 10); 
+     }
+      function cl3() {
+        var ncol=3; var cs=3;
+        renderImage(vcan,  ncol, cs, 200, 200, 200, 10); 
+     }
+      function cl4() {
+        var ncol=4; var cs=4;
+        renderImage(vcan,  ncol, cs, 0, 200, 200, 10);  
+     }
+
+      var vm=10;
+      function cl5() {
+        var ncol=4; var cs=4; var i; var x; var y;
+        for (i=1; i<=4; i++) {
+
+           ncol= Math.floor(Math.random()*10) +1;
+           x= Math.floor(Math.random()*200);
+           if (x<100) x=0; else x=200;
+           y= Math.floor(Math.random()*200);
+           if (y<100) y=0; else y=200;
+
+           renderImage(vcan,  ncol, i, x, y, 200, vm); 
+        }
+        vm+=10;
+     }
+
+
+     function star() {
+        var ncol=3; var cs=33;
+        renderImage(vcan,  ncol, cs, 0, 0, 400, 50); 
+     }
+
+
+    </SCRIPT>
+
+    <input type=button value="r1" onclick=cl1()>
+    <input type=button value="r2" onclick=cl2()>
+    <input type=button value="r3" onclick=cl3()>
+    <input type=button value="r4" onclick=cl4()>
+    <input type=button value="r5" onclick=cl5()>
+    <input type=button value="star" onclick=star()>
+    <input type=button value="+z" onclick=clz()>
+    <input type=button value="-z" onclick=cla()>
+ </BODY  >
+</HTML>
+

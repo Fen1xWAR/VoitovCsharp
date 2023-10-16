@@ -1,0 +1,35 @@
+<HTML>
+ <HEAD>
+   <META http-equiv="Content-Type"    content="text/html; charset=windows-1251">
+   <TITLE> 4.2 </TITLE>
+
+ </HEAD>
+
+ <BODY  >
+    <canvas id="idCanvas" width="400px" height="400px"></canvas>
+    <script src="canv.js" type="text/javascript" encoding="UTF-8"></script>
+
+ 
+     <SCRIPT language=JavaScript>
+      var vcan=document.getElementById("idCanvas");
+      var ss=   "rgba(200,0,0)";  //"rgba(0,0,250,.6)"  "rgba(200,200,100,.6)";
+      var BR=50;  var MR=15;
+
+      function clz() {
+         var cs=34;
+        doImage(vcan,  ss, cs, 200, 200, BR, MR);  
+     }
+
+      function cla() { 
+        var cs=35;
+         //alert("=1= ");
+        doImage(vcan,  ss, cs,  200, 200, BR, MR);    
+     }
+
+    </SCRIPT>
+
+    <input type=button value="+z" onclick=clz()>
+    <input type=button value="!z" onclick=cla()>
+ </BODY  >
+</HTML>
+
