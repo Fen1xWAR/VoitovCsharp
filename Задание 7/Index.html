@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="display: flex; flex-direction: column; width: 70%;">
+<button onclick="GetResult()">Вычислить</button>
+<label for="N">Число N</label>
+<input id="N" type="text">
+<label for="result">Результат</label>
+<input type="text" disabled id="result">
+</body>
+</html>
+<script !src="">
+    function GetResult() {
+       let n=  document.getElementById('N').value;
+       let result = 0
+       for (let i = 0; i<=n; i++){
+           result += i*i
+
+       }
+
+       document.getElementById('result').value = result;
+    }
+</script>

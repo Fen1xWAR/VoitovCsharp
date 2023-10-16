@@ -4,19 +4,19 @@ global$mode;
 </HEAD>
 <BODY>
 <?php
-//   $va=  $GLOBALS["_GET"];
-//   $mode= $va["mode"];
-//   $id= $va["id"];  $fio= $va["fio"]; $cp= $va["cp"]; $gr= $va["gr"];
+   $va=  $GLOBALS["_GET"];
+   $mode= $va["mode"];
+   $id= $va["id"];  $fio= $va["fio"]; $cp= $va["cp"]; $gr= $va["gr"];
 
    echo "<h3> *** ПРОГРАММА РАБОТЫ С БАЗОЙ ДАННЫХ   *** </h2>";
    $dblocation = "localhost"; 
    $dbuser = "root"; 
    $dbpasswd = "Aa220377!";
    $db = new mysqli($dblocation,$dbuser,$dbpasswd);
-//   $dbcnx = @mysqli_connect($dblocation, $dbuser, $dbpasswd);
+   $dbcnx = @mysqli_connect($dblocation, $dbuser, $dbpasswd);
    echo $db->error;
-//   $r = $db->select_db("dmdb");
-//   echo $db->error;
+   $r = $db->select_db("dmdb");
+   echo $db->error;
 
   function dodb() {   // Создание базы данных
       global $db;
