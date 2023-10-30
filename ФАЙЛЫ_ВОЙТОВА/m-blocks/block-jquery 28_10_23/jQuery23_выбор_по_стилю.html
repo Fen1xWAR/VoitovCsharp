@@ -1,0 +1,38 @@
+<HTML>
+<head>
+<title>Выбрать параграф</title>
+     <script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"> </script>
+     <script type="text/javascript" src="jquery-1.12.3.js"> </script>
+
+
+  <script type="text/javascript">
+     function vybor() {
+       alert( "vybor23");
+       $('p.second').toggleClass('striped');
+       //$('#third').toggleClass('striped' );
+     }
+  </script>
+
+  <style>
+    //p.second { font-weight: normal;   }  
+    p.second { font-weight: bold;   }  
+    p.striped { background-color: cyan;   } 
+  </style>
+</head>
+
+
+<body>
+ <h1> Выбор по стилю</h1>
+
+ <div>
+   <p>параграф 1. </p>
+   <p class="second">параграф 2. </p>
+   <p id="third" >параграф 3. </p>
+   <p>параграф 4. </p>
+ </div>
+
+ <form>
+     <input type="button" value="Выбор" onclick=vybor() </input>
+ </form>
+</body>
+</HTML>

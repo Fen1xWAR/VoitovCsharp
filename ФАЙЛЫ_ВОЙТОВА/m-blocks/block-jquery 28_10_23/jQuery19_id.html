@@ -1,0 +1,34 @@
+<HTML>
+<head>
+<title>Выбрать параграф </title>
+     <script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"> </script>
+     <script type="text/javascript" src="jquery-1.12.3.js"> </script>
+
+  <script type="text/javascript">
+     function vybor() {
+       var qq=  $('#third').text();
+       alert("выбор текста: $('#third').text()="+qq);
+       $('#third').toggleClass('scriped' );
+     }
+  </script>
+
+  <style>
+    p.scriped { background-color: cyan;   }  
+  </style>
+</head>
+
+<body>
+ <h1> Выбор параграфа. Делаем: $('#third').toggleClass('scriped' );</h1>
+
+ <div>
+   <p>параграф 1. </p>
+   <p>параграф 2. </p>
+   <p id="third" > параграф 3. </p>
+   <p>параграф 4. </p>
+ </div>
+
+ <form>
+     <input type="button" value="Выбор" onclick=vybor() </input>
+ </form>
+</body>
+</HTML>

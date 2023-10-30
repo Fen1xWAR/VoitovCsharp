@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Замена цвета</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <style>
+        .tsvet_nastroeniya {
+            background-color: cyan;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p>!Меркурий</p>
+    <p>Венера</p>
+    <p>Земля</p>
+    <p>Марс</p>
+    <button onclick="selectElement()">Изменить цвет</button>
+    <button onclick="g2()">Старт цикла</button>
+
+    <script>
+        // Меркурий Венера Земля Марс
+        var m = 0;
+        var a= new Array(4);
+        a[0]='Меркурий'; a[1]='Венера'; a[2]='Земля'; a[3]='Марс';
+
+        function selectElement() {
+            m++;
+            var cm = m % 4;
+            for (let i = 0; i < 4; i++) {
+                $('p')[i].classList = "";
+            }
+            $('p')[cm].classList.add('tsvet_nastroeniya');
+        }
+
+        function g2() {
+            let a = setInterval("selectElement()", 1000);
+        }
+    </script>
+</body>
+</html>

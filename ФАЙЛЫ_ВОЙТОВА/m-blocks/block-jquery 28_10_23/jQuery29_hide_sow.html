@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>Скрытие и отображение элементов</title>
+     <script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"> </script>
+     <script type="text/javascript" src="jquery-1.12.3.js"> </script>
+
+  <script type="text/javascript">
+
+     function hide() { 
+           //alert("qq");
+           $("p:first").hide(); 
+     }
+
+     function show() { 
+           $("p:first").show(); 
+     }
+
+  </script>
+</head>
+
+<body>
+ <h1> Скрытие и отображение элементов</h1>
+
+ <div>
+   <p>параграф 1. </p>
+   <p>параграф 2. </p>
+   <p>параграф 3. </p>
+   <p>параграф 4. </p>
+ </div>
+
+ <form>
+   <input type="button" value="спрятать параграф"  onclick="hide()"   >
+   <input type="button" value="показать параграф"  onclick="show()"  >
+ </form>
+</body>
+</html>

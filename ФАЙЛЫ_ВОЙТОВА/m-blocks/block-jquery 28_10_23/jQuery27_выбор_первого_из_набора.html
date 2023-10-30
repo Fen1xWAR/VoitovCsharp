@@ -1,0 +1,27 @@
+<HTML>
+<head>
+<title>Select the first of aset of elements</title>
+     <script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"> </script>
+
+  <script type="text/javascript">
+     function setStyle() {
+       alert("qq1");
+       $('p:first').css('font-style',"italic");
+     }
+  </script>
+</head>
+
+<body>
+ <h1> Выбор первого из набора</h1>
+ <div>
+   <p>Параграф 1. </p>
+   <p>Параграф 2. </p>
+   <p>Параграф 3. </p>
+   <p>Параграф  4. </p>
+ </div>
+
+ <form>
+     <input type="button" value="Style first Параграф" onclick=setStyle() </input>
+ </form>
+</body>
+</HTML>

@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>Выполнение после загрузки</title>
+     <script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"> </script>
+     <script type="text/javascript" src="jquery-1.12.3.js"> </script>
+
+
+  <script type="text/javascript">
+     $(function(){ 
+           alert("qq");
+           $("p.second").addClass("striped"); 
+       });
+  </script>
+
+  <style>
+    p.second { font-weight: normal; }
+    p.striped { background-color: cyan;   } 
+  </style>
+</head>
+
+<body>
+ <h1> Выполнение кода, когда страница готова</h1>
+
+ <div>
+   <p>параграф 1. </p>
+   <p class="second">параграф 2. </p>
+   <p>параграф 3. </p>
+   <p>параграф 4. </p>
+ </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<HTML>
+<head>
+<title>jQuery31 Select one  of a set of elements</title>
+     <script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"> </script>
+
+  <script type="text/javascript">
+     function selectElement() {
+       var S= $('p')[0].innerHTML;
+       alert("qq2  S="+S);
+       $('p')[0].innerHTML="<i>Hello there!</i>";
+     }
+  </script>
+</head>
+
+<body>
+ <h1> Выбор одного элемента из набора и замена его</h1>
+ <div>
+   <p>параграф 1. </p>
+   <p>параграф  2. </p>
+   <p>параграф  3. </p>
+   <p>параграф  4. </p>
+ </div>
+
+ <form>
+     <input type="button" value="выбор элемента" onclick=selectElement() </input>
+ </form>
+</body>
+</HTML>

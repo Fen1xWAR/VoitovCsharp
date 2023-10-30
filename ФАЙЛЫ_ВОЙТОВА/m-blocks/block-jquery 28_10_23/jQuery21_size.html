@@ -1,0 +1,31 @@
+<HTML>
+<head>
+<title>Выбрать параграф</title>
+     <script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"> </script>
+     <script type="text/javascript" src="jquery-1.12.3.js"> </script>
+
+
+  <script type="text/javascript">
+     function count() {
+       //alert( "qq");
+       alert("Это " + $("p").size() + " параграфа.");
+     }
+  </script>
+
+</head>
+
+<body>
+ <h1> Подсчет параграфов</h1>
+
+ <div>
+   <p>параграф 1. </p>
+   <p>параграф 2. </p>
+   <p>параграф 3. </p>
+   <p>параграф 4. </p>
+ </div>
+
+ <form>
+     <input type="button" value="Выбор" onclick=count() </input>
+ </form>
+</body>
+</HTML>

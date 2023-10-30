@@ -1,0 +1,31 @@
+<HTML>
+<head>
+<title>jQuery31 Select one  of a set of elements</title>
+     <script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"> </script>
+
+  <script type="text/javascript">
+    function zamena() {
+       alert("=qq=");
+       $(document).ready(function(){
+         $("div").text("= qqqqqq =");
+       });
+    }
+  </script>
+
+  <style>
+   .blue { color:blue; }
+  </style>
+</head>
+
+<body>
+ <h1> Перезаписывание текста элемента div </h1>
+ <div> text1 </div>
+ <div> text2 </div>
+ <div> text3 </div>
+
+ <form>
+     <input type="button" value="замена" onclick=zamena() </input>
+ </form>
+
+</body>
+</HTML>
