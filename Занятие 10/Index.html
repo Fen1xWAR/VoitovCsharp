@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+<body>
+<ul>
+    <li class="planet">Меркурий</li>
+    <li class="planet">Венера</li>
+    <li class="planet">Земля</li>
+    <li class="planet">Марс</li>
+    <li class="planet">Юпитер</li>
+    <li class="planet">Сатурн</li>
+    <li class="planet">Уран</li>
+    <li class="planet">Нептун</li>
+</ul>
+</body>
+<script !src="">
+    $(document).ready(function() {
+        let listItems = $('li');
+        let index = 0;
+        setInterval(function() {
+            listItems.eq(index).addClass('selected');
+            listItems.eq(index - 1).removeClass('selected');
+            index++;
+            if (index === listItems.length) {
+                index = 0;
+            }
+        }, 1000)
+    });
+</script>
+</html>

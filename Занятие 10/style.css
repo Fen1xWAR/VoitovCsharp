@@ -1,0 +1,10 @@
+*{
+    box-sizing: border-box;
+}
+.planet{
+    font-size: 1.3rem;
+    margin: 10px;
+}
+.selected{
+   color: blue;
+}
