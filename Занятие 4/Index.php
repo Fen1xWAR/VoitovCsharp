@@ -10,7 +10,7 @@
 <body>
         <h1>Таблица квадратов</h1>
 <table style="border-collapse: collapse">
-    <?
+    <?php
     for ($i = 1; $i<= 10; $i++){
         echo "<tr>";
         for ($j= 1; $j<= 10; $j ++){

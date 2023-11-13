@@ -9,7 +9,7 @@
     <title>Таблица</title>
 </head>
 <body>
-<?
+<?php
 $header = $_GET["header"];
 $m = $_GET["M"];
 $n = $_GET["N"];
