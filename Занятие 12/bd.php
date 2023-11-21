@@ -43,11 +43,6 @@ try {
             echo "Invalid arguments";
     }
 
-//    CreateDB($pdo,$dbName);
-//    CreateTable($pdo,'Users','Hobby');
-//    insertHobby($dbName,$pdo,'Hockey');
-//
-//    ReadTable($pdo,$dbName,"Hobby");
 
 
 } catch (PDOException $e) {
